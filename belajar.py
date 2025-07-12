@@ -42,6 +42,8 @@ with col3:
     st.header("An owl")
     st.image("https://static.streamlit.io/examples/owl.jpg")
 
+import time
+
 with st.sidebar:
     with st.echo():
         st.write("This code will be printed to the sidebar.")
