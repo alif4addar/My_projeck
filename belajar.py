@@ -4,7 +4,7 @@ st.write("Hello, *World!* :🖕🖕:")
 
 
 st.title("This is a title")
-st.title("_Streamlit_ is :blue[cool] :sunglasses:")
+st.title("_Streamlit_ is :red[cool] :sunglasses:")
 
 st.header("_Streamlit_ is :blue[cool] :sunglasses:", divider="gray")
 
