@@ -51,7 +51,7 @@ with st.sidebar:
     with st.spinner("Loading..."):
         time.sleep(5)
     st.success("Done!")
-
+st.success('This is a success message!', icon="✅")
 if not st.user.is_logged_in:
     if st.button("Log in"):
         st.login()
@@ -60,4 +60,4 @@ else:
         st.logout()
     st.write(f"Hello, {st.user.name}!")
 
-st.success('This is a success message!', icon="✅")
+
