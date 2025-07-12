@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.write("Hello, *World!* :sunglasses:")
+st.write("Hello, *World!* :🖕🖕:")
 
 
 st.title("This is a title")
