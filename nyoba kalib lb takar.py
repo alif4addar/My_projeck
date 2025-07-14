@@ -1,6 +1,6 @@
 import streamlit as st
 
 
-st.button("Reset")
-st.write("Why hello there")
+if st.button("Reset"):
+  st.write("Why hello there")
 
