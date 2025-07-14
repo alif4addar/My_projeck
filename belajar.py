@@ -42,23 +42,6 @@ with col3:
     st.header("An owl")
     st.image("https://static.streamlit.io/examples/owl.jpg")
 
-import time
-
-with st.sidebar:
-    with st.echo():
-        st.write("This code will be printed to the sidebar.")
-
-    with st.spinner("Loading..."):
-        time.sleep(5)
-    st.success("Done!")
-st.success('This is a success message!', icon="✅")
-if not st.user.is_logged_in:
-    if st.button("Log in"):
-        st.login()
-else:
-    if st.button("Log out"):
-        st.logout()
-    st.write(f"Hello, {st.user.name}!")
 
 if not st.user.is_logged_in:
     if st.button("Log in"):
