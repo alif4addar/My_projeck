@@ -1,4 +1,4 @@
 import streamlit as st
 
 if st.button("masuk"):
-  print("M")
+  st.print("M")
