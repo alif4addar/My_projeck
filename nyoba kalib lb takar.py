@@ -1,3 +1,4 @@
 import streamlit as st
 
-st.button("masuk")
+if st.button("masuk"):
+  print("M")
