@@ -82,7 +82,7 @@ if st.button("Hitung"):
         dens_udara = ((0.464554 * rata["tekanan"]) - rata["kelembaban"]*(0.00252*rata["suhu_udara"]-0.020582)) / ((237.15+rata["suhu_udara"])*1000)
 
         # Hitung volume sebenarnya
-        massa = sum(hasil)
+        massa = sum(hasil)/len(hasil)
         koef_muai = 1e-5
         v_20 = massa * (1 - koef_muai * (T - 20)) / (dens_air - dens_udara)
 
