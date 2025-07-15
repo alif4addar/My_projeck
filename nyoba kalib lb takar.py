@@ -83,7 +83,7 @@ if st.button("Hitung"):
 
         # Hitung volume sebenarnya
         massa = sum(hasil)/len(hasil)
-        koef_muai = 1e-5
+        koef_muai = 10**-5
         v_20 = massa * (1 - koef_muai * (T - 20)) / (dens_air - dens_udara)
 
         koreksi = v_20 - v_konven
