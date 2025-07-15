@@ -2,6 +2,7 @@
 
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 st.set_page_config(page_title="Aplikasi Kalibrasi Volume", layout="wide")
 st.title("Aplikasi Kalibrasi Volume - Labu Takar")
@@ -9,7 +10,7 @@ st.title("Aplikasi Kalibrasi Volume - Labu Takar")
 # Input volume konvensional
 v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=0.1)
 
-# Template input tabel
+# Template input tabel kosong
 st.subheader("Input Data Pengukuran")
 cols = [
     "Bobot Kosong (g)",
@@ -19,12 +20,17 @@ cols = [
     "Tekanan Udara (mmHg)",
     "Kelembaban (%)"
 ]
-def_data = [[1.0, 49.9999, 25.0, 27.0, 759.0, 68.0] for _ in range(3)]
+def_data = [["" for _ in range(len(cols))] for _ in range(5)]  # 5 baris kosong
 df = st.data_editor(pd.DataFrame(def_data, columns=cols), use_container_width=True)
 
 # Tombol proses
 if st.button("Hitung"):
     try:
+        # Validasi input kosong
+        if df.isnull().values.any() or (df == "").values.any():
+            st.error("❌ Semua kolom harus diisi sebelum menghitung!")
+            st.stop()
+
         # Ambil data dari dataframe
         kosong = df["Bobot Kosong (g)"].astype(float).tolist()
         isi = df["Bobot Isi (g)"].astype(float).tolist()
@@ -76,4 +82,3 @@ if st.button("Hitung"):
 
     except Exception as e:
         st.error(f"Terjadi kesalahan: {e}")
-
