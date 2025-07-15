@@ -26,7 +26,15 @@ if "rows" not in st.session_state:
 def add_row():
     st.session_state.rows += 1
 
-st.button("+ Tambah Baris", on_click=add_row)
+def remove_row():
+    if st.session_state.rows > 1:
+        st.session_state.rows -= 1
+
+col1, col2 = st.columns(2)
+with col1:
+    st.button("+ Tambah Baris", on_click=add_row)
+with col2:
+    st.button("- Hapus Baris", on_click=remove_row)
 
 def_data = [["" for _ in range(len(cols))] for _ in range(st.session_state.rows)]
 df = st.data_editor(pd.DataFrame(def_data, columns=cols), use_container_width=True, num_rows="dynamic")
