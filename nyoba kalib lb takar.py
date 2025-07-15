@@ -6,7 +6,6 @@ import statistics
 
 st.set_page_config(page_title="Aplikasi Kalibrasi Volume", layout="wide")
 st.title("Aplikasi Kalibrasi Volume - Labu Takar")
-st.title("By Lifa.Q")
 
 # Input volume konvensional
 v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=0.1)
