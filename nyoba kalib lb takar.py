@@ -89,14 +89,14 @@ with col_k:
 
 lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0)
 
-# Lanjutkan perhitungan jika rata-rata tersedia
+# Tombol khusus menghitung ketidakpastian
 if "rata_pengukuran" in st.session_state:
     rata = st.session_state.rata_pengukuran
 
     st.divider()
-    st.subheader("Lanjutkan Perhitungan Volume dan Ketidakpastian")
+    st.subheader("Perhitungan Volume dan Ketidakpastian")
 
-    if st.button("Lanjutkan Hitung Volume & Ketidakpastian"):
+    if st.button("Hitung Volume & Ketidakpastian"):
         try:
             T = rata["Suhu Air (C)"]
             massa = rata["Bobot Isi (Hasil) (g)"]
