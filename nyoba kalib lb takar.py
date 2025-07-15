@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -20,8 +18,18 @@ cols = [
     "Tekanan Udara (mmHg)",
     "Kelembaban (%)"
 ]
-def_data = [["" for _ in range(len(cols))] for _ in range(5)]  # 5 baris kosong
-df = st.data_editor(pd.DataFrame(def_data, columns=cols), use_container_width=True)
+
+# Kontrol jumlah baris
+if "rows" not in st.session_state:
+    st.session_state.rows = 1
+
+def add_row():
+    st.session_state.rows += 1
+
+st.button("+ Tambah Baris", on_click=add_row)
+
+def_data = [["" for _ in range(len(cols))] for _ in range(st.session_state.rows)]
+df = st.data_editor(pd.DataFrame(def_data, columns=cols), use_container_width=True, num_rows="dynamic")
 
 # Tombol proses
 if st.button("Hitung"):
