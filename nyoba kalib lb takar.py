@@ -79,15 +79,15 @@ if st.button("Hitung Rata-rata Data Pengukuran"):
 CC = ["Timbangan","Termometer Air","Termometer Udara","Barometer Udara","Hygrometer"]
 st.subheader("Input Alat Ukur")
 st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
+lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0)
 col_nst, col_u95, col_k = st.columns(3)
 with col_nst:
     nst = [st.number_input(f"NST {label}", value=0.0, key=f"nst_{i}") for i, label in enumerate(CC)]
 with col_u95:
     u95 = [st.number_input(f"U95 {label}", value=0.0, key=f"u95_{i}") for i, label in enumerate(CC)]
 with col_k:
-    k_val = [st.number_input(f"K {label}", value=1.0, key=f"kval_{i}") for i, label in enumerate(CC)]
+    nilai_k = [st.number_input(f"K {label}", value=1.0, key=f"kval_{i}") for i, label in enumerate(CC)]
 
-lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0)
 
 # Tombol khusus menghitung ketidakpastian
 if "rata_pengukuran" in st.session_state:
@@ -117,7 +117,7 @@ if "rata_pengukuran" in st.session_state:
             U1 = math.sqrt(k_neraca**2 + k_ulangan**2)
             Cs1 = (1 - koef_muai * (T - 20)) / (dens_air - dens_udara)
 
-            U2 = u95[2] / k_val[2]
+            U2 = u95[2] / nilai_k[2]
             Cs2 = massa * (-koef_muai) / (dens_air - dens_udara)
 
             Ut = U2
@@ -125,9 +125,9 @@ if "rata_pengukuran" in st.session_state:
             U3 = abs(Ut * Ci)
             Cs3 = -massa * (1 - koef_muai*(T - 20)) / ((dens_air - dens_udara)**2)
 
-            Uh = u95[5]/k_val[5]
-            Up = u95[4]/k_val[4]
-            Ut = u95[3]/k_val[3]
+            Uh = u95[5]/nilai_k[5]
+            Up = u95[4]/nilai_k[4]
+            Ut = u95[3]/nilai_k3]
             Ch = (0.020582 - 0.00252*suhu_udara) / ((237.15 + suhu_udara) * 1000)
             Cp = (0.464554) / ((237.15 + suhu_udara) * 1000)
             Ct = (-0.6182*kelembaban - 0.46554*tekanan) / (((237.15 + suhu_udara)**2) * 1000)
