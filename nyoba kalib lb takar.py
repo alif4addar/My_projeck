@@ -128,9 +128,9 @@ if "rata_pengukuran" in st.session_state:
             Cs3 = -massa * (1 - koef_muai*(T - 20)) / ((dens_air - dens_udara)**2)
 
         #Ketidakpastian densitas udara(U4)
-            Uh = u95[5]/nilai_k[4]
-            Up = u95[4]/nilai_k[3]
-            Ut = u95[3]/nilai_k[2]
+            Uh = u95[4]/nilai_k[4]
+            Up = u95[3]/nilai_k[3]
+            Ut = u95[2]/nilai_k[2]
             Ch = (0.020582 - 0.00252*suhu_udara) / ((237.15 + suhu_udara) * 1000)
             Cp = (0.464554) / ((237.15 + suhu_udara) * 1000)
             Ct = (-0.6182*kelembaban - 0.46554*tekanan) / (((237.15 + suhu_udara)**2) * 1000)
