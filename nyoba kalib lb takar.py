@@ -111,20 +111,23 @@ if "rata_pengukuran" in st.session_state:
             v_20 = massa * (1 - koef_muai * (T - 20)) / (dens_air - dens_udara)
             koreksi = v_20 - v_konven
 
-            # Ketidakpastian
+        # Ketidakpastian massa air (U1)
             k_neraca = (lop/(2*math.sqrt(3)))
             k_ulangan = rata["SEM Bobot Isi (g)"]
             U1 = math.sqrt(k_neraca**2 + k_ulangan**2)
             Cs1 = (1 - koef_muai * (T - 20)) / (dens_air - dens_udara)
 
-            U2 = u95[2] / nilai_k[2]
+        #Ketidakpastian suhu air (U2)
+            U2 = u95[1] / nilai_k[1]
             Cs2 = massa * (-koef_muai) / (dens_air - dens_udara)
 
+        #Ketidakpastian densitas air(U3)
             Ut = U2
             Ci = -((5.32e-6 * T**2 + 1.20e-4*T + 2.82e-5) / ((T + 72.45147)**2))
             U3 = abs(Ut * Ci)
             Cs3 = -massa * (1 - koef_muai*(T - 20)) / ((dens_air - dens_udara)**2)
 
+        #Ketidakpastian densitas udara(U4)
             Uh = u95[5]/nilai_k[4]
             Up = u95[4]/nilai_k[3]
             Ut = u95[3]/nilai_k[2]
@@ -134,13 +137,18 @@ if "rata_pengukuran" in st.session_state:
             U4 = math.sqrt((Uh*Ch)**2 + (Up*Cp)**2 + (Ut*Ct)**2)
             Cs4 = massa * (1 - koef_muai*(T - 20)) / ((dens_air - dens_udara)**2)
 
+        #Ketidakpastian KMV(U5)
             U5 = (0.1 * koef_muai) / math.sqrt(3)
             Cs5 = massa * (20 - T) / (dens_air - dens_udara)
 
+        #Ketidakpastian miniskus(U6)
             U6 = (0.05 * nst[0]) / math.sqrt(3)
             Cs6 = 1
 
+        #Ketidakpastian gabungan(Ugab)
             Ugab = math.sqrt((U1*Cs1)**2 + (U2*Cs2)**2 + (U3*Cs3)**2 + (U4*Cs4)**2 + (U5*Cs5)**2 + (U6*Cs6)**2)
+        
+        #Ketidakpastian Diperluas
             U95_exp = Ugab * 2
 
             st.subheader("Hasil Perhitungan")
