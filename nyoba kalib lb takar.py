@@ -10,18 +10,9 @@ st.set_page_config(page_title="Aplikasi Kalibrasi Volume", layout="wide")
 # Judul utama
 st.markdown(
     """
-    <table style="width:100%; border-collapse: collapse; text-align: center;">
-        <tr>
-            <td colspan="2" style="background-color: #0A3871; color: white; font-size: 24px; padding: 10px;">
-                Aplikasi Kalibrasi Volume Labu Takar
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="background-color: #f2f2f2; color: #333; font-size: 18px; padding: 8px;">
-                Hitung Volume Sebenarnya dan Ketidakpastian Labu Takar Anda
-            </td>
-        </tr>
-    </table>
+    <h1 style='text-align: center; color: #0A3871;'>
+        Aplikasi Kalibrasi Volume Labu Takar
+    </h1>
     """,
     unsafe_allow_html=True
 )
