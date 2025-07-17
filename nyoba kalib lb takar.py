@@ -47,7 +47,7 @@ st.markdown("""
 
     /* Hero Section */
     .hero-section {
-        background: linear-gradient(to right, #ECFAE5, #DDF6D2); /* Gradien biru */
+        background: linear-gradient(to right, #CAE8BD, #B0DB9C); /* Gradien biru */
         color: white;
         padding: 60px 30px;
         text-align: center;
