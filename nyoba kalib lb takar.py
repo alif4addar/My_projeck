@@ -33,14 +33,14 @@ st.markdown("""
     .header-section {
         padding: 20px 0;
         text-align: center;
-        background-color: #ffffff;
+        background-color: #D1D8BE;
         border-bottom: 1px solid #eee;
         margin-bottom: 30px;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     .header-section h1 {
-        color: 819A91
+        color: #819A91;
         font-weight: 700;
         margin: 0;
     }
