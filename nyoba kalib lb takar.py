@@ -10,6 +10,8 @@ st.title("Aplikasi Kalibrasi Volume - Labu Takar")
 # Input volume konvensional
 v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=0.1)
 
+ketelitian_lb = st.number_input("Masukkan Ketelitian Labu Takar (mL)", min_value=0.0, step=0.1)
+
 # Template input tabel kosong
 st.subheader("Input Data Pengukuran")
 cols = [
@@ -86,7 +88,7 @@ with col_nst:
 with col_u95:
     u95 = [st.number_input(f"U95 {label}", value=0.0, key=f"u95_{i}") for i, label in enumerate(CC)]
 with col_k:
-    nilai_k = [st.number_input(f"K {label}", value=1.0, key=f"kval_{i}") for i, label in enumerate(CC)]
+    nilai_k = [st.number_input(f"K {label}", value=2.0, key=f"kval_{i}") for i, label in enumerate(CC)]
 
 
 # Tombol khusus menghitung ketidakpastian
@@ -142,7 +144,7 @@ if "rata_pengukuran" in st.session_state:
             Cs5 = massa * (20 - T) / (dens_air - dens_udara)
 
         #Ketidakpastian miniskus(U6)
-            U6 = (0.05 * nst[0]) / math.sqrt(3)
+            U6 = (0.05 * ketelitia_lb) / math.sqrt(3)
             Cs6 = 1
 
         #Ketidakpastian gabungan(Ugab)
