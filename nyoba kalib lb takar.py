@@ -11,7 +11,7 @@ st.title("Aplikasi Kalibrasi Volume - Labu Takar")
 # Input volume konvensional
 v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=0.1)
 
-ketelitian_lb = st.number_input("Masukkan Ketelitian Labu Takar (mL)", min_value=0.0, step=0.1)
+ketelitian_lb = st.number_input("Masukkan Ketelitian Labu Takar (mL)", min_value=0.0, step=0.0001, format="%.4f")
 
 # Template input tabel kosong
 st.subheader("Input Data Pengukuran")
@@ -85,11 +85,11 @@ lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0000)
 st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
 col_nst, col_u95, col_k = st.columns(3)
 with col_nst:
-    nst = [st.number_input(f"NST {label}", value=0.0000, key=f"nst_{i}") for i, label in enumerate(CC)]
+    nst = [st.number_input(f"NST {label}", value=0.0000, key=f"nst_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
 with col_u95:
-    u95 = [st.number_input(f"U95 {label}", value=0.0000, key=f"u95_{i}") for i, label in enumerate(CC)]
+    u95 = [st.number_input(f"U95 {label}", value=0.0000, key=f"u95_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
 with col_k:
-    nilai_k = [st.number_input(f"K {label}", value=2.0, key=f"kval_{i}") for i, label in enumerate(CC)]
+    nilai_k = [st.number_input(f"K {label}", value=2.0, key=f"kval_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
 
 # Tombol khusus menghitung ketidakpastian
 if "rata_pengukuran" in st.session_state:
