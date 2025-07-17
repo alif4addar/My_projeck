@@ -306,7 +306,7 @@ u95 = []
 nilai_k = []
 
 with col_nst:
-    st.markdown("#### NST")
+    
     for i, label in enumerate(CC):
         nst.append(st.number_input(f"NST {label}", value=0.0, key=f"nst_{i}", format="%.4f"))
 with col_u95:
