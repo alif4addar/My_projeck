@@ -33,7 +33,7 @@ st.markdown("""
     .header-section {
         padding: 20px 0;
         text-align: center;
-        background-color: #EEEFE0;
+        background-color: #F4F8D3;
         border-bottom: 1px solid #eee;
         margin-bottom: 30px;
         border-radius: 8px;
