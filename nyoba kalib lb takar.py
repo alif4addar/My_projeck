@@ -316,7 +316,7 @@ if "rata_pengukuran" in st.session_state:
 
             koef_muai = 1e-5
             v_20 = massa * (1 - koef_muai * (T - 20)) / (dens_air - dens_udara)
-            koreksi = v_20 - v_konven
+            koreksi = abs(v_20 - v_konven)
 
         # Ketidakpastian massa air (U1)
             k_neraca = (lop/(2*math.sqrt(3)))
