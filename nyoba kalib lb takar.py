@@ -8,22 +8,63 @@ import statistics
 st.set_page_config(page_title="Aplikasi Kalibrasi Volume", layout="wide")
 
 # Judul utama
+# Inject CSS: Background + Font
 st.markdown(
     """
-    <h1 style='text-align: center; color: #0A3871;'>
-        Aplikasi Kalibrasi Volume Labu Takar
-    </h1>
+    <style>
+    /* Ganti font seluruh aplikasi */
+    html, body, [class*="css"] {
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Background gradasi */
+    [data-testid="stAppViewContainer"] > .main {
+        background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+        padding: 2rem;
+    }
+
+    /* Batas kontainer agar tidak terlalu mepet */
+    .block-container {
+        padding-top: 1rem;
+    }
+    </style>
     """,
     unsafe_allow_html=True
 )
-st.markdown (
+
+# Judul dan subjudul dalam tampilan tabel header
+st.markdown(
     """
-    <style>
-    bg {
-        background-color: #f0f4f8;}
-    <style>
-    """, 
-    unsafe_allow_html=True)
+    <table style="width:100%; border-collapse: collapse; margin-bottom: 25px;">
+        <tr>
+            <td colspan="2" style="
+                background-color: #0A3871;
+                color: white;
+                font-size: 28px;
+                padding: 20px;
+                text-align: center;
+                border-radius: 10px 10px 0 0;
+            ">
+                Aplikasi Kalibrasi Volume Labu Takar
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="
+                background-color: #e8f0fe;
+                color: #333333;
+                font-size: 18px;
+                padding: 15px;
+                text-align: center;
+                border-radius: 0 0 10px 10px;
+            ">
+                Hitung Volume Sebenarnya dan Ketidakpastian Labu Takar Anda
+            </td>
+        </tr>
+    </table>
+    """,
+    unsafe_allow_html=True
+)
+
 
 # Subjudul
 st.markdown(
