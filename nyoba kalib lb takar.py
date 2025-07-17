@@ -80,10 +80,11 @@ if st.button("Hitung Rata-rata Data Pengukuran"):
 
 # Input tambahan untuk ketidakpastian
 CC = ["Timbangan","Termometer Air","Termometer Udara","Barometer Udara","Hygrometer"]
+satuan = ["(g)", "(C)", "(C)", "(mmHg)", "(%)"]
 st.subheader("Input Alat Ukur")
 lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0000)
 st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
-satuan = ["(g)", "(C)", "(C)", "(mmHg)", "(%)"]
+
 col_nst, col_u95, col_k = st.columns(3)
 with col_nst:
     st.markdown("#### NST")
