@@ -14,7 +14,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# --- CSS Kustom (untuk meniru gaya TBHX.net) ---
+
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
@@ -33,7 +33,7 @@ st.markdown("""
     .header-section {
         padding: 20px 0;
         text-align: center;
-        background-color: #D1D8BE;
+        background-color: #EEEFE0;
         border-bottom: 1px solid #eee;
         margin-bottom: 30px;
         border-radius: 8px;
@@ -47,7 +47,7 @@ st.markdown("""
 
     /* Hero Section */
     .hero-section {
-        background: linear-gradient(to right, #6dd5ed, #2193b0); /* Gradien biru */
+        background: linear-gradient(to right, #ECFAE5, #DDF6D2); /* Gradien biru */
         color: white;
         padding: 60px 30px;
         text-align: center;
