@@ -90,7 +90,6 @@ with col_u95:
 with col_k:
     nilai_k = [st.number_input(f"K {label}", value=2.0, key=f"kval_{i}") for i, label in enumerate(CC)]
 
-
 # Tombol khusus menghitung ketidakpastian
 if "rata_pengukuran" in st.session_state:
     rata = st.session_state.rata_pengukuran
