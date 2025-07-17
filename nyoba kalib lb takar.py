@@ -6,6 +6,28 @@ import math
 import statistics
 
 st.set_page_config(page_title="Aplikasi Kalibrasi Volume", layout="wide")
+
+# Judul utama
+st.markdown(
+    """
+    <h1 style='text-align: center; color: #0A3871;'>
+        Aplikasi Kalibrasi Volume Labu Takar
+    </h1>
+    """,
+    unsafe_allow_html=True
+)
+
+# Subjudul
+st.markdown(
+    """
+    <h3 style='text-align: center; font-weight: normal; color: #333333;'>
+        Hitung Volume Sebenarnya dan Ketidakpastian Labu Takar Anda
+    </h3>
+    """,
+    unsafe_allow_html=True
+)
+
+
 st.title("Aplikasi Kalibrasi Volume - Labu Takar")
 
 # Input volume konvensional
