@@ -7,6 +7,7 @@ import statistics
 
 st.set_page_config(page_title="Aplikasi Kalibrasi Volume", layout="wide")
 
+<style>
 # Judul utama
 st.markdown(
     """
@@ -16,7 +17,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+bg { background-color: #f0f4f8;}
 
 # Subjudul
 st.markdown(
