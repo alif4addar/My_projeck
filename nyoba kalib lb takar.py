@@ -16,7 +16,14 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-bg ( """ <style> background-color: #f0f4f8; <style>""", unsafe_allow_html=True)
+st.markdown (
+    """
+    <style>
+    bg {
+        background-color: #f0f4f8;}
+    <style>
+    """, 
+    unsafe_allow_html=True)
 
 # Subjudul
 st.markdown(
