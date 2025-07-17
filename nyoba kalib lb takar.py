@@ -7,7 +7,6 @@ import statistics
 
 st.set_page_config(page_title="Aplikasi Kalibrasi Volume", layout="wide")
 
-<style>
 # Judul utama
 st.markdown(
     """
