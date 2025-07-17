@@ -40,7 +40,7 @@ st.markdown("""
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     .header-section h1 {
-        color: #2193b0; /* Warna biru khas */
+        color: 819A91
         font-weight: 700;
         margin: 0;
     }
