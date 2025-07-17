@@ -88,7 +88,7 @@ st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
 col_nst, col_u95, col_k = st.columns(3)
 with col_nst:
     st.markdown("#### NST")
-    nst = [st.number_input(f" {label} ({satuan[i]})", value=0.0000, key=f"nst_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
+    nst = [st.number_input(f" {label} ( {satuan[i]} )", value=0.0000, key=f"nst_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
 with col_u95:
     st.markdown("#### U95")
     u95 = [st.number_input(f" {label}", value=0.0000, key=f"u95_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
