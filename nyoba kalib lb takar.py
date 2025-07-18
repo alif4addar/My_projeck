@@ -186,19 +186,7 @@ st.markdown("""
         padding: 6px;
     }
     
-    /* Warna spinner number input (+/-) */
-    .st.input[type=number]::-webkit-inner-spin-button {
-        background-color: #819A91; /* Warna latar tombol */
-        color: #ED3500; /* Warna simbol +/- (jika didukung) */
-        border-radius: 3px;
-        border: 4px solid #FDFAF6;
-    }
-
-    /* Untuk Firefox */
-    .st.input[type=number] {
-    -moz-appearance: textfield;
-    }
-
+    
 
        
     /* Specific styling for table headers */
