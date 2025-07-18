@@ -85,7 +85,7 @@ st.markdown("""
     /* Input Fields */
     .stNumberInput label, .stTextInput label, .stTextArea label {
         font-weight: 600;
-        color: #555;
+        color: #FF9B45;
         margin-bottom: 5px;
         display: block;
     }
