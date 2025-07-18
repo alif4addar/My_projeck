@@ -55,6 +55,7 @@ st.markdown("""
         margin-bottom: 40px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+    
     .hero-section h2 {
         font-size: 2.8em;
         font-weight: 700;
@@ -62,6 +63,16 @@ st.markdown("""
         line-height: 1.2;
         color: white; /* Pastikan judul di hero putih */
     }
+    
+    .hero-section h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        color: #819A91;
+    }
+
+    
     .hero-section p {
         font-size: 1.1em;
         margin-bottom: 20px;
@@ -282,7 +293,7 @@ if st.button("Hitung Rata-rata Data Pengukuran"):
 CC = ["Timbangan","Termometer Air","Termometer Udara","Barometer Udara","Hygrometer"]
 satuan = ["g", "C", "C", "mmHg", "%"]
 st.markdown("<div style='color:#819A91; font-size:30px;'>Input Alat Ukur</div>", unsafe_allow_html=True)
-
+st.markdown("<h3 style='color:#819A91;'>Input Alat Ukur</h3>", unsafe_allow_html=True)
 lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0000)
 st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
 
