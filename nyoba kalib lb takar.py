@@ -234,8 +234,21 @@ st.markdown("""
         font-size: 0.9em;
     }
 
-    body {
-        background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    /* Paksa latar belakang utama aplikasi jadi putih */
+    html, body, [class*="stApp"] {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    /* Paksa latar belakang semua container jadi putih juga */
+    .st-emotion-cache-1r6slb0 {
+        background-color: white !important;
+    }
+
+    /* Warna header dan elemen lain juga bisa disesuaikan */
+    .st-emotion-cache-13k62yr {
+        background-color: white !important;
+        color: black !important;
     }
     
     </style>
