@@ -162,16 +162,7 @@ st.markdown("""
         background-color: #748DAE !important;
     }
     
-    .stDataFrame {
-        border-radius: 8px;
-        overflow: hidden;
-        border: 1px solid #ddd;
-    }
-    
-    .stDataFrame .data-grid {
-        border-radius: 8px;
-    }
-    
+   
     /* Specific styling for table headers */
     .stDataFrame .data-grid-header {
         background-color: #f0f0f0;
