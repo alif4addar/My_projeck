@@ -12,6 +12,36 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+
+if "show_sidebar" not in st.session_state:
+    st.session_state.show_sidebar = False
+if "menu_selected" not in st.session_state:
+    st.session_state.menu_selected = "🏠 Home"
+
+# --- SIDEBAR MENU ---
+if st.session_state.show_sidebar:
+    with st.sidebar:
+        menu = option_menu(
+            menu_title="🌟 Kebutuhan Kimia",
+            options=[
+                "🏠 Home", "⚗ Reaksi Kimia", "🧪 Stoikiometri",
+                "🧫 Konsentrasi Larutan", "💧 pH dan pOH",
+                "🧬 Tabel Periodik", "🔄 Konversi Satuan",
+                "📈 Regresi Linier", "📖 About"
+            ],
+            icons=[
+                "house", "flask", "calculator",
+                "droplet-half", "thermometer-half",
+                "grid-3x3-gap-fill", "repeat",
+                "graph-up", "info-circle"
+            ],
+            default_index=0
+        )
+        st.session_state.menu_selected = menu
+
+selected = st.session_state.menu_selected
+
+
 # --- CSS Kustom (untuk meniru gaya TBHX.net) ---
 st.markdown("""
     <style>
