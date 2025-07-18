@@ -160,7 +160,7 @@ st.markdown("""
     input[type="number"] {
         background-color: #393E46 !important;
         color: #FDFAF6 !important;
-        border: 1px solid #819A91 !important;
+        border: 2px solid #819A91 !important;
         border-radius: 6px;
         padding: 8px;
     }
@@ -174,14 +174,14 @@ st.markdown("""
     .st-emotion-cache-13k62yr {
         background-color: #393E46 !important;
         color: #FDFAF6 !important;
-        border: 1px solid #819A91 !important;
+        border: 2px solid #819A91 !important;
     }
 
     /* Warna sel data editor */
     [data-testid="stDataFrame"] input {
         background-color: #393E46 !important;
         color: #FDFAF6 !important;
-        border: 1px solid #819A91 !important;
+        border: 2px solid #819A91 !important;
         border-radius: 6px !important;
         padding: 6px;
     }
