@@ -156,7 +156,6 @@ st.markdown("""
         border-radius: 8px;
     }
 
-
     /* Warna untuk kolom input seperti NST, U95, K */
     input[type="number"] {
         background-color: #393E46 !important;
