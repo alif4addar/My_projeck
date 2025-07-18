@@ -158,8 +158,8 @@ st.markdown("""
 
     /* Warna untuk kolom input seperti NST, U95, K */
     .st.input[type="number"] {
-        background-color: #393E46 !important;
-        color: #FDFAF6 !important;
+        background-color: #FDFAF6 !important;
+        color: #393E46 !important;
         border: 2px solid #819A91 !important;
         border-radius: 6px;
         padding: 8px;
