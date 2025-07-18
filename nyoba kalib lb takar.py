@@ -174,6 +174,7 @@ st.markdown("""
     .st-emotion-cache-13k62yr {
         background-color: #393E46 !important;
         color: #FDFAF6 !important;
+        border: 1px solid #FFFFFF !important;
     }
 
     /* Warna sel data editor */
@@ -181,7 +182,7 @@ st.markdown("""
         background-color: #393E46 !important;
         color: #FDFAF6 !important;
         border: 1px solid white !important;
-        border-radius: 4px;
+        border-radius: 6px !important;
         padding: 6px;
     }
 
