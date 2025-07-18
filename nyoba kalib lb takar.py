@@ -281,7 +281,7 @@ if st.button("Hitung Rata-rata Data Pengukuran"):
 # Input tambahan untuk ketidakpastian
 CC = ["Timbangan","Termometer Air","Termometer Udara","Barometer Udara","Hygrometer"]
 satuan = ["g", "C", "C", "mmHg", "%"]
-st.subheader("<h1 style='color:#819A91;'>Input Alat Ukur</h1>", unsafe_allow_html=True)
+st.markdown("<h3 style='color:#819A91;'>Input Alat Ukur</h3>", unsafe_allow_html=True)
 lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0000)
 st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
 
