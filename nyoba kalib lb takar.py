@@ -193,7 +193,7 @@ st.markdown("""
         background-color: #BAD8B6; /* Warna latar tombol */
         color: #FFFCFB; /* Warna simbol + / - */
         border: 1px solid #ffffff;
-        border-radius: 3px;
+        border-radius: 9px;
     }
 
     /* Firefox */
