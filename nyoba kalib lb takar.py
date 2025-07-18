@@ -147,14 +147,31 @@ st.markdown("""
 
 
     /* Data Editor */
+    .stDataFrame div[data-testid="stDataFrame"] {
+        background-color: #2D3E50 !important;
+        color: white !important;  
+    }
+    
+    .stDataFrame .css-1dp5vir {
+        background-color: #445566 !important;
+        color: white !important;
+        font-weight: bold;
+    }
+
+    .stDataFrame .css-1oe5cao:hover {
+        background-color: #3c4f65 !important;
+    }
+    
     .stDataFrame {
         border-radius: 8px;
-        overflow: hidden; /* Ensures rounded corners apply */
+        overflow: hidden;
         border: 1px solid #ddd;
     }
+    
     .stDataFrame .data-grid {
         border-radius: 8px;
     }
+    
     /* Specific styling for table headers */
     .stDataFrame .data-grid-header {
         background-color: #f0f0f0;
