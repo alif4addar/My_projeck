@@ -157,12 +157,17 @@ st.markdown("""
     }
 
     /* Warna untuk kolom input seperti NST, U95, K */
-    .st.input[type="number"] {
-        background-color: #FDFAF6 !important;
-        color: #393E46 !important;
+    input[type="number"] {
+        background-color: #393E46 !important;
+        color: #FDFAF6 !important;
         border: 2px solid #819A91 !important;
         border-radius: 6px;
         padding: 8px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button {
+        background-color: #393E46;
+        color: #FDFAF6;
     }
 
     /* Warna untuk teks label input */
