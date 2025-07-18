@@ -65,8 +65,8 @@ st.markdown("""
     }
     
     .hero-section h3 {
-        font-size: 26px;
-        font-weight: 700;
+        font-size: 28px;
+        font-weight: 750;
         margin-bottom: 15px;
         line-height: 1.2;
         color: #5F6F65;
