@@ -226,6 +226,7 @@ ketelitian_lb = st.number_input("Masukkan Ketelitian Labu Takar (mL)", min_value
 
 # Template input tabel kosong
 st.subheader("Input Data Pengukuran")
+st.markdown("<h3 style='color:#727D73;'>Input Data Pengukuran</h3>", unsafe_allow_html=True)
 cols = [
     "Bobot Kosong (g)",
     "Bobot Isi (g)",
