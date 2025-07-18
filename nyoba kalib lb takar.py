@@ -299,12 +299,15 @@ st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
 col_nst, col_u95, col_k = st.columns(3)
 with col_nst:
     st.markdown("#### NST")
+    st.markdown("<h3 style='color:#5F6F65;'>NST</h3>", unsafe_allow_html=True)
     nst = [st.number_input(f" {label} ( {satuan[i]} )", value=0.0000, key=f"nst_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
 with col_u95:
     st.markdown("#### U95")
+    st.markdown("<h3 style='color:#5F6F65;'>U95</h3>", unsafe_allow_html=True)
     u95 = [st.number_input(f" {label}", value=0.0000, key=f"u95_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
 with col_k:
     st.markdown("#### K")
+    st.markdown("<h3 style='color:#5F6F65;'>K</h3>", unsafe_allow_html=True)
     nilai_k = [st.number_input(f" {label}", value=2.0, key=f"kval_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
 
 # Tombol khusus menghitung ketidakpastian
