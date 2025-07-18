@@ -115,7 +115,7 @@ st.markdown("""
         outline: none;
     }
 
-    /* Buttons */
+    /* Buttons E1EACD */
     .stButton > button {
         background-color: #BAD8B6;
         color: white;
@@ -128,7 +128,7 @@ st.markdown("""
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .stButton > button:hover {
-        background-color: #E1EACD;
+        background-color: #FFFCFB;
         box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
     /* Style for the "Add Row" and "Remove Row" buttons */
