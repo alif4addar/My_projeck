@@ -148,7 +148,7 @@ st.markdown("""
 
     /* Data Editor */
     .stDataFrame div[data-testid="stDataFrame"] {
-        background-color: #2D3E50 !important;
+        background-color: #393E46 !important;
         color: white !important;  
     }
     
@@ -159,7 +159,7 @@ st.markdown("""
     }
 
     .stDataFrame .css-1oe5cao:hover {
-        background-color: #3c4f65 !important;
+        background-color: #748DAE !important;
     }
     
     .stDataFrame {
