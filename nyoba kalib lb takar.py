@@ -233,6 +233,11 @@ st.markdown("""
         color: #777;
         font-size: 0.9em;
     }
+
+    body {
+        background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    }
+    
     </style>
 """, unsafe_allow_html=True)
 
