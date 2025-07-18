@@ -187,7 +187,7 @@ st.markdown("""
     }
     
     /* Warna spinner number input (+/-) */
-    .st.number_input[type=number]::-webkit-inner-spin-button {
+    .st.input[type=number]::-webkit-inner-spin-button {
         background-color: #819A91; /* Warna latar tombol */
         color: #ED3500; /* Warna simbol +/- (jika didukung) */
         border-radius: 3px;
@@ -195,7 +195,7 @@ st.markdown("""
     }
 
     /* Untuk Firefox */
-    .st.number_input[type=number] {
+    .st.input[type=number] {
     -moz-appearance: textfield;
     }
 
