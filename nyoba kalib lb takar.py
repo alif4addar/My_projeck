@@ -165,11 +165,6 @@ st.markdown("""
         padding: 8px;
     }
 
-    input[type=number]::-webkit-inner-spin-button {
-        background-color: #0118D8
-        color: #0118D8;
-    }
-
     /* Warna untuk teks label input */
     label {
         color: #FDFAF6 !important;
