@@ -225,7 +225,6 @@ v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, s
 ketelitian_lb = st.number_input("Masukkan Ketelitian Labu Takar (mL)", min_value=0.0, step=0.0001, format="%.4f")
 
 # Template input tabel kosong
-st.subheader("Input Data Pengukuran")
 st.markdown("<h3 style='color:#727D73;'>Input Data Pengukuran</h3>", unsafe_allow_html=True)
 cols = [
     "Bobot Kosong (g)",
