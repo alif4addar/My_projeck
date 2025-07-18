@@ -148,43 +148,7 @@ st.markdown("""
 
     /* Data Editor */
 
-    /* Style untuk tabel data_editor */
-    div[data-testid="stDataEditorGrid"] {
-        background-color: #393E46 !important;
-        color: white !important;
-        border-radius: 5px;
-        font-weight: 500;
-    }
-
-/* Style untuk sel */
-    div[data-testid="stDataEditorGrid"] .cell {
-        background-color: #393E46 !important;
-        color: white !important;
-    }
-
-/* Style untuk header kolom */
-    div[data-testid="stDataEditorGrid"] .columnHeader {
-        background-color: #2E323B !important;
-        color: white !important;
-        font-weight: bold;
-    }
-
-    
-    .stDataFrame div[data-testid="stDataFrame"] {
-        background-color: #393E46;
-        color: white;  
-    }
-    
-    .stDataFrame .css-1dp5vir {
-        background-color: #445566;
-        color: white;
-        font-weight: bold;
-    }
-
-    .stDataFrame .css-1oe5cao:hover {
-        background-color: #748DAE;
-    }
-    
+   
    
     /* Specific styling for table headers */
     .stDataFrame .data-grid-header {
