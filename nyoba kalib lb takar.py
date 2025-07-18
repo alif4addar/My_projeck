@@ -90,7 +90,7 @@ st.markdown("""
         margin-bottom: 30px;
     }
     .app-card h3, .app-card h4 {
-        color: #2193b0; /* Warna biru untuk subheader */
+        color: #2193b0; 
         font-weight: 600;
         margin-bottom: 20px;
     }
