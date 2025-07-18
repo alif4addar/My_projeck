@@ -206,7 +206,7 @@ st.markdown("""
 st.markdown('<div class="app-card">', unsafe_allow_html=True)
 
 
-st.title("Aplikasi Kalibrasi Volume - Labu Takar")
+st.markdown("<h1 style='color:#1E90FF;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
 
 # Input volume konvensional
 v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=0.1)
