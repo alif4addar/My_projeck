@@ -191,7 +191,7 @@ st.markdown("""
         background-color: #819A91; /* Warna latar tombol */
         color: #ED3500; /* Warna simbol +/- (jika didukung) */
         border-radius: 3px;
-        border: 1px solid #FDFAF6;
+        border: 4px solid #FDFAF6;
     }
 
     /* Untuk Firefox */
