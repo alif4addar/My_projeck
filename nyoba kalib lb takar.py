@@ -157,7 +157,7 @@ st.markdown("""
     }
 
     /* Warna untuk kolom input seperti NST, U95, K */
-    input[type="number"] {
+    .st.input[type="number"] {
         background-color: #393E46 !important;
         color: #FDFAF6 !important;
         border: 2px solid #819A91 !important;
@@ -187,7 +187,7 @@ st.markdown("""
     }
     
     /* Warna spinner number input (+/-) */
-    input[type=number]::-webkit-inner-spin-button {
+    .st.number_input[type=number]::-webkit-inner-spin-button {
         background-color: #819A91; /* Warna latar tombol */
         color: #ED3500; /* Warna simbol +/- (jika didukung) */
         border-radius: 3px;
@@ -195,7 +195,7 @@ st.markdown("""
     }
 
     /* Untuk Firefox */
-    input[type=number] {
+    .st.number_input[type=number] {
     -moz-appearance: textfield;
     }
 
