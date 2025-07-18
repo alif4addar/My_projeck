@@ -144,8 +144,35 @@ st.markdown("""
     .stButton > button[data-testid="stFormSubmitButton"] + div .stButton > button:hover {
         background-color: #c82333;
     }
+    
+    /* Gaya tombol tambah ("+") */
+    .stButton button:first-child {
+        background-color: #28a745 !important; /* Hijau */
+        color: white !important;
+        border: 1px solid white;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    .stButton button:first-child:hover {
+        background-color: #218838 !important;
+        box-shadow: 0 0 8px rgba(33, 136, 56, 0.5);
+    }
 
+    /* Gaya tombol kurang ("-") */
+    .stButton button:nth-child(2) {
+        background-color: #dc3545 !important; /* Merah */
+        color: white !important;
+        border: 1px solid white;
+        font-weight: 600;
+    }
+    .stButton button:nth-child(2):hover {
+        background-color: #c82333 !important;
+        box-shadow: 0 0 8px rgba(200, 35, 51, 0.5);
+    }
 
+    
+    
+    
     /* Data Editor */
     .stDataFrame {
         border-radius: 8px;
