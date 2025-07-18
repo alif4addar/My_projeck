@@ -191,7 +191,7 @@ st.markdown("""
     input[type=number]::-webkit-inner-spin-button,
     input[type=number]::-webkit-outer-spin-button {
         background-color: #BAD8B6; /* Warna latar tombol */
-        color: white; /* Warna simbol + / - */
+        color: #1F7D53; /* Warna simbol + / - */
         border: 1px solid #ffffff;
         border-radius: 3px;
     }
