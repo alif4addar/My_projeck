@@ -166,8 +166,8 @@ st.markdown("""
     }
 
     input[type=number]::-webkit-inner-spin-button {
-        background-color: #393E46;
-        color: #FDFAF6;
+        background-color: #0118D8
+        color: #0118D8;
     }
 
     /* Warna untuk teks label input */
