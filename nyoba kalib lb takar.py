@@ -341,6 +341,12 @@ with col_k:
     st.markdown("<h3 style='color:#5F6F65; font-size: 24px;'>K</h3>", unsafe_allow_html=True)
     nilai_k = [st.number_input(f" {label}", value=2.0, key=f"kval_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
 
+
+
+
+st.markdown('<div class="app-card">', unsafe_allow_html=True)
+st.markdown("<h3 style='color:#5F6F65;'>Perhitungan Ketidakpastian</h3>", unsafe_allow_html=True)
+
 # Tombol khusus menghitung ketidakpastian
 if "rata_pengukuran" in st.session_state:
     rata = st.session_state.rata_pengukuran
