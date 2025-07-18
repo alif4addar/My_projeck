@@ -40,7 +40,7 @@ st.markdown("""
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     .header-section h1 {
-        color: #727D73;
+        color: #5F6F65;
         font-weight: 700;
         margin: 0;
     }
@@ -69,7 +69,7 @@ st.markdown("""
         font-weight: 700;
         margin-bottom: 15px;
         line-height: 1.2;
-        color: #727D73;
+        color: #5F6F65;
     }
 
     
@@ -217,7 +217,7 @@ st.markdown("""
 st.markdown('<div class="app-card">', unsafe_allow_html=True)
 
 
-st.markdown("<h1 style='color:#727D73;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
 
 # Input volume konvensional
 v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=0.1)
@@ -225,7 +225,7 @@ v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, s
 ketelitian_lb = st.number_input("Masukkan Ketelitian Labu Takar (mL)", min_value=0.0, step=0.0001, format="%.4f")
 
 # Template input tabel kosong
-st.markdown("<h3 style='color:#727D73;'>Input Data Pengukuran</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='color:#5F6F65;'>Input Data Pengukuran</h3>", unsafe_allow_html=True)
 cols = [
     "Bobot Kosong (g)",
     "Bobot Isi (g)",
@@ -292,7 +292,7 @@ if st.button("Hitung Rata-rata Data Pengukuran"):
 # Input tambahan untuk ketidakpastian
 CC = ["Timbangan","Termometer Air","Termometer Udara","Barometer Udara","Hygrometer"]
 satuan = ["g", "C", "C", "mmHg", "%"]
-st.markdown("<h3 style='color:#727D73;'>Input Alat Ukur</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='color:#5F6F65;'>Input Alat Ukur</h3>", unsafe_allow_html=True)
 lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0000)
 st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
 
