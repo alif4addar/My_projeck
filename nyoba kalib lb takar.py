@@ -249,8 +249,6 @@ st.markdown("""
 
 # --- Bagian Input Volume Konvensional ---
 st.markdown('<div class="app-card">', unsafe_allow_html=True)
-
-
 st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
 
 # Input volume konvensional
@@ -327,9 +325,9 @@ if st.button("Hitung Rata-rata Data Pengukuran"):
 # Input tambahan untuk ketidakpastian
 CC = ["Timbangan","Termometer Air","Termometer Udara","Barometer Udara","Hygrometer"]
 satuan = ["g", "C", "C", "mmHg", "%"]
+st.markdown('<div class="app-card">', unsafe_allow_html=True)
 st.markdown("<h3 style='color:#5F6F65;'>Input Alat Ukur</h3>", unsafe_allow_html=True)
 lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0000)
-st.markdown('<div class="app-card">', unsafe_allow_html=True)
 st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
 
 col_nst, col_u95, col_k = st.columns(3)
