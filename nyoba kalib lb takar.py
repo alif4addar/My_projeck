@@ -185,9 +185,30 @@ st.markdown("""
         border-radius: 6px !important;
         padding: 6px;
     }
+    
+    
+    /* Ubah warna tombol + dan - di semua input number */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        background-color: #BAD8B6; /* Warna latar tombol */
+        color: white; /* Warna simbol + / - */
+        border: 1px solid #ffffff;
+        border-radius: 3px;
+    }
 
-   
-   
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    /* Hilangkan panah default di semua browser, jika ingin custom sepenuhnya */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+       
     /* Specific styling for table headers */
     .stDataFrame .data-grid-header {
         background-color: #f0f0f0;
