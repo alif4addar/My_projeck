@@ -117,7 +117,7 @@ st.markdown("""
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .stButton > button:hover {
-        background-color: #E1EACD; /* Warna biru lebih gelap saat hover */
+        background-color: #E1EACD;
         box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
     /* Style for the "Add Row" and "Remove Row" buttons */
@@ -206,7 +206,7 @@ st.markdown("""
 st.markdown('<div class="app-card">', unsafe_allow_html=True)
 
 
-st.markdown("<h1 style='color:#1E90FF;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color:#E1EACD;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
 
 # Input volume konvensional
 v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=0.1)
