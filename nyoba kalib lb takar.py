@@ -189,7 +189,7 @@ st.markdown("""
     /* Warna spinner number input (+/-) */
     input[type=number]::-webkit-inner-spin-button {
         background-color: #819A91; /* Warna latar tombol */
-        color: #FDFAF6; /* Warna simbol +/- (jika didukung) */
+        color: #ED3500; /* Warna simbol +/- (jika didukung) */
         border-radius: 3px;
         border: 1px solid #FDFAF6;
     }
