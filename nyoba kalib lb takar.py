@@ -160,7 +160,7 @@ st.markdown("""
     input[type="number"] {
         background-color: #393E46 !important;
         color: #FDFAF6 !important;
-        border: 1px solid #ccc;
+        border: 1px solid white !important;
         border-radius: 6px;
         padding: 8px;
     }
@@ -180,6 +180,9 @@ st.markdown("""
     [data-testid="stDataFrame"] input {
         background-color: #393E46 !important;
         color: #FDFAF6 !important;
+        border: 1px solid white !important;
+        border-radius: 4px;
+        padding: 6px;
     }
 
    
