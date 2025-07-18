@@ -40,7 +40,7 @@ st.markdown("""
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     .header-section h1 {
-        color: #819A91;
+        color: #727D73;
         font-weight: 700;
         margin: 0;
     }
@@ -65,11 +65,11 @@ st.markdown("""
     }
     
     .hero-section h3 {
-        font-size: 30px;
+        font-size: 26px;
         font-weight: 700;
         margin-bottom: 15px;
         line-height: 1.2;
-        color: #819A91;
+        color: #727D73;
     }
 
     
