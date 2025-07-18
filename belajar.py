@@ -142,6 +142,38 @@ st.markdown("""
     .stDataFrame .data-grid {
         border-radius: 8px;
     }
+
+
+    /* Warna untuk kolom input seperti NST, U95, K */
+    input[type="number"] {
+        background-color: #393E46 !important;
+        color: #FDFAF6 !important;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 8px;
+    }
+
+/* Warna untuk teks label input */
+    label {
+        color: #FDFAF6 !important;
+    }
+
+/* Warna header tabel Data Editor */
+    .st-emotion-cache-13k62yr {
+        background-color: #393E46 !important;
+        color: #FDFAF6 !important;
+    }
+
+/* Warna sel data editor */
+    [data-testid="stDataFrame"] input {
+        background-color: #393E46 !important;
+        color: #FDFAF6 !important;
+    }
+
+    
+
+
+    
     /* Specific styling for table headers */
     .stDataFrame .data-grid-header {
         background-color: #f0f0f0;
@@ -190,31 +222,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-/* Warna untuk kolom input seperti NST, U95, K */
-input[type="number"] {
-    background-color: #393E46 !important;
-    color: #FDFAF6 !important;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 8px;
-}
-
-/* Warna untuk teks label input */
-label {
-    color: #FDFAF6 !important;
-}
-
-/* Warna header tabel Data Editor */
-.st-emotion-cache-13k62yr {
-    background-color: #393E46 !important;
-    color: #FDFAF6 !important;
-}
-
-/* Warna sel data editor */
-[data-testid="stDataFrame"] input {
-    background-color: #393E46 !important;
-    color: #FDFAF6 !important;
-}
 
 
 
