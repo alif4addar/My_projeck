@@ -147,6 +147,41 @@ st.markdown("""
 
 
     /* Data Editor */
+    .stDataFrame {
+        border-radius: 8px;
+        overflow: hidden; /* Ensures rounded corners apply */
+        border: 1px solid #ddd;
+    }
+    .stDataFrame .data-grid {
+        border-radius: 8px;
+    }
+
+
+    /* Warna untuk kolom input seperti NST, U95, K */
+    input[type="number"] {
+        background-color: #393E46 !important;
+        color: #FDFAF6 !important;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 8px;
+    }
+
+    /* Warna untuk teks label input */
+    label {
+        color: #FDFAF6 !important;
+    }
+
+    /* Warna header tabel Data Editor */
+    .st-emotion-cache-13k62yr {
+        background-color: #393E46 !important;
+        color: #FDFAF6 !important;
+    }
+
+    /* Warna sel data editor */
+    [data-testid="stDataFrame"] input {
+        background-color: #393E46 !important;
+        color: #FDFAF6 !important;
+    }
 
    
    
