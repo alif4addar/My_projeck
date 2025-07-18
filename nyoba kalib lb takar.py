@@ -9,8 +9,8 @@ st.set_page_config(page_title="Aplikasi Kalibrasi Volume", layout="wide")
 
 st.set_page_config(
     page_title="Aplikasi Kalibrasi Volume",
-    page_icon="🧪",
-    layout="wide", # Menggunakan layout wide agar ada lebih banyak ruang
+    page_icon="📖",
+    layout="wide", 
     initial_sidebar_state="collapsed"
 )
 
