@@ -283,7 +283,7 @@ if st.session_state.page == 1:
 
 elif st.session_state.page == 2:
 
-    col_kembali, col_space, col_lanjut = st.columns([2, 4, 2])
+    col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
     with col_kembali:
         if st.button("Back"): prev_page()
     with col_lanjut:
@@ -321,7 +321,7 @@ elif st.session_state.page == 2:
         if st.session_state.rows > 1:
             st.session_state.rows -= 1
     
-    col1, col2, col3 = st.columns([2, 6, 2])
+    col1, col2, col3 = st.columns([3, 6, 3])
     with col1:
         st.button(" + Tambah Baris", on_click=add_row)
     with col3:
