@@ -304,20 +304,18 @@ elif st.session_state.page == 3:
     with col_lanjut:
         if st.button("Next"): next_page()
 
-elif st.session_state.page == 4:
 
-    
-    
-# Bagian Input VKonvensional
+elif st.session_state.page == 4:
+    # Bagian Input VKonvensional
     st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
     st.markdown('<div class="app-card">', unsafe_allow_html=True)
 
-# Input volume konvensional
+    # Input volume konvensional
     v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=25.0,  format="%.2f")
 
     ketelitian_lb = st.number_input("Masukkan Ketelitian Labu Takar (mL)", min_value=0.0, step=0.001, format="%.4f")
 
-# Template input tabel
+    # Template input tabel
     st.markdown('<div class="app-card">', unsafe_allow_html=True)
     st.markdown("<h3 style='color:#5F6F65;'>Input Data Pengukuran</h3>", unsafe_allow_html=True)
     cols = [
