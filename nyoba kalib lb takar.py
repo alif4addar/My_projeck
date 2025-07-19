@@ -283,7 +283,7 @@ if st.session_state.page == 1:
 
 elif st.session_state.page == 2:
 
-    col_kembali, col_space, col_lanjut = st.columns([1, 6, 1])
+    col_kembali, col_space, col_lanjut = st.columns([2, 4, 2])
     with col_kembali:
         if st.button("Back"): prev_page()
     with col_lanjut:
