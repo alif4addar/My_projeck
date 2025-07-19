@@ -253,10 +253,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# Inisialisasi halaman
+# Inisialisasi
 if "page" not in st.session_state:
     st.session_state.page = 1
-
+if "rows" not in st.session_state:
+    st.session_state.rows = 1
 # Fungsi navigasi
 def home():
     st.session_state.page -= 4
@@ -264,13 +265,17 @@ def lanjut():
     st.session_state.page += 1
 def lanjut_2():
     st.session_state.page += 2
-def back():    
-    st.session_state.page -= 1
 def kembali():    
-    st.session_state.page -= 1
-def kembali_2():    
-    st.session_state.page -= 2
-
+    if st.session_state.page > 1:
+        st.session_state.page -= 2
+def kembali_2():
+    if st.session_state.page > 1:
+        st.session_state.page -= 2   
+def add_row():
+    st.session_state.rows += 1 
+def remove_row():
+    if st.session_state.rows > 1:
+        st.session_state.rows -= 1
 
 if st.session_state.page == 1:
 # --- Header ---
@@ -335,15 +340,7 @@ elif st.session_state.page == 4:
     ]
     
     # jmlh baris
-    if "rows" not in st.session_state:
-        st.session_state.rows = 1
-    
-    def add_row():
-        st.session_state.rows += 1
-    
-    def remove_row():
-        if st.session_state.rows > 1:
-            st.session_state.rows -= 1
+
     
     col1, col2, col3 = st.columns([3, 6, 3])
     with col1:
@@ -491,13 +488,10 @@ elif st.session_state.page == 4:
 
     col_kembali, col_space, col_lanjut= st.columns([2, 6, 2])
     with col_kembali:
-        if st.button("Back", on_click=kembali ):
-        
+        st.button("Back", on_click=kembali )  
     with col_lanjut:
-        if st.button("Next", on_click=lanjut ):
-
-
-            
+        st.button("Next", on_click=lanjut )
+        
 elif st.session_state.page == 5:
     st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)    
     if st.button("Home"):
