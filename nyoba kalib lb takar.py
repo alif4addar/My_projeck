@@ -282,6 +282,13 @@ if st.session_state.page == 1:
 
 
 elif st.session_state.page == 2:
+
+    col_prev, col_next = st.columns(2)
+    with col_prev:
+        if st.button("⬅ Kembali"): prev_page()
+    with col_next:
+        if st.button("➡ Lanjut"): next_page()
+    
 # --- Bagian Input Volume Konvensional --- 
     st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
     st.markdown('<div class="app-card">', unsafe_allow_html=True)
