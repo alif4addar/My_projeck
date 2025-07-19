@@ -282,9 +282,9 @@ if st.session_state.page == 1:
 
 
 elif st.session_state.page == 2:
-# --- Bagian Input Volume Konvensional ---
-    st.markdown('<div class="app-card">', unsafe_allow_html=True)
+# --- Bagian Input Volume Konvensional --- 
     st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
+    st.markdown('<div class="app-card">', unsafe_allow_html=True)
 
 # Input volume konvensional
     v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=0.1)
