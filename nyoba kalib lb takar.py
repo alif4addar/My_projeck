@@ -484,9 +484,11 @@ elif st.session_state.page == 4:
 
     col_kembali, col_space, col_lanjut= st.columns([2, 6, 2])
     with col_kembali:
-        st.button("Back", on_click=kembali )  
+        if st.button("Back", on_click=kembali ):
+            kembali()
     with col_lanjut:
-        st.button("Next", on_click=lanjut )
+        if st.button("Next", on_click=lanjut ):
+            lanjut()
         
 elif st.session_state.page == 5:
     st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)    
