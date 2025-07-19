@@ -484,10 +484,10 @@ elif st.session_state.page == 4:
 
     col_kembali, col_space, col_lanjut= st.columns([2, 6, 2])
     with col_kembali:
-        if st.button("Back", on_click=kembali ):
+        if st.button("Back"):
             kembali()
     with col_lanjut:
-        if st.button("Next", on_click=lanjut ):
+        if st.button("Next"):
             lanjut()
         
 elif st.session_state.page == 5:
