@@ -482,14 +482,12 @@ elif st.session_state.page == 4:
             except Exception as e:
                 st.error(f"Terjadi kesalahan saat perhitungan lanjutan: {e}")
 
-    col_kembali, col_space, col_lanjut= st.columns([2, 6, 2])
-    with col_kembali:
-        if st.button("Back"):
-            kembali()
-    with col_lanjut:
-        if st.button("Next"):
-            lanjut()
-        
+
+    if st.button("Back"):
+        kembali()
+    if st.button("Next"):
+        lanjut()
+   
 elif st.session_state.page == 5:
     st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)    
     if st.button("Home"):
