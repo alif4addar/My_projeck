@@ -494,11 +494,9 @@ elif st.session_state.page == 4:
         if st.button("Back"):
             back()
             st.stop()
-    
-            
-   
-            
-
+    with col_lanjut:
+        if st.button("Next"):
+            lanjut()
 elif st.session_state.page == 5:
     st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)    
     if st.button("Home"):
