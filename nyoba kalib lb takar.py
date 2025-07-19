@@ -279,6 +279,7 @@ if st.session_state.page == 1:
     col_pp, col_space, col_next = st.columns([3, 6, 2])
     with col_pp:
         if st.button("Petunjuk Penggunaan"): next_page()
+            st.stop()
     with col_next:
         if st.button("Mulai"): next_page_2()
   
@@ -301,6 +302,7 @@ elif st.session_state.page == 3:
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
     with col_kembali:
         if st.button("Back"): prev_page_2()
+            st.stop()
     with col_lanjut:
         if st.button("Next"): next_page()
 
@@ -485,7 +487,7 @@ elif st.session_state.page == 4:
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
     with col_lanjut:
         if st.button("Next"): next_page()
-    
+            st.stop()
     with col_kembali:
         if st.button("Back"): prev_page()
             
