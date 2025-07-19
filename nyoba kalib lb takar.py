@@ -259,7 +259,7 @@ if "page" not in st.session_state:
 
 # Fungsi navigasi
 def home():
-    st.session_state.page == 1
+    st.session_state.page -= 4
 def lanjut():
     st.session_state.page += 1
 def lanjut_2():
