@@ -301,16 +301,16 @@ selected = st.session_state.menu_selected
 
 
 # --- Header ---
-if selected == "🏠 Home"
+if selected == "🏠 Home":
     st.markdown('<div class="header-section"><h1>Aplikasi Kalibrasi Volume Labu Takar</h1></div>', unsafe_allow_html=True)
 
 #====PP===
-elif selected == "📋 Cara Penggunaan Web Aplikasi"
+elif selected == "📋 Cara Penggunaan Web Aplikasi":
     st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
     st.markdown('<div class="app-card"><p>pada halaman pertama</p></div>', unsafe_allow_html=True)
 
 
-elif selected == "📑 Syarat Yang Harus Dipenuhi"
+elif selected == "📑 Syarat Yang Harus Dipenuhi":
     st.markdown("""
         <div class="hero-section">
             <p>Alat komprehensif ini membantu Anda melakukan perhitungan kalibrasi volume labu takar secara akurat, termasuk analisis ketidakpastian sesuai standar metrologi.</p>           
@@ -318,7 +318,7 @@ elif selected == "📑 Syarat Yang Harus Dipenuhi"
     """, unsafe_allow_html=True)
 
 
-elif selected == "🧮 Perhitungan"
+elif selected == "🧮 Perhitungan":
     
     # Bagian Input VKonvensional
     st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
@@ -487,7 +487,7 @@ elif selected == "🧮 Perhitungan"
                 st.error(f"Terjadi kesalahan saat perhitungan lanjutan: {e}")
 
    
-elif selected == "end Page"
+elif selected == "end Page":
     st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)
        
         
