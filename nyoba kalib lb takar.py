@@ -492,6 +492,9 @@ elif st.session_state.page == 5:
     st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)    
     if st.button("Home"):
         home()
+    if st.button("Back"):
+        kembali()
+        
         
     
     
