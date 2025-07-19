@@ -264,13 +264,10 @@ def lanjut():
     st.session_state.page += 1
 def lanjut_2():
     st.session_state.page += 2
-def kembali():
-    if st.session_state.page > 1:
-        st.session_state.page -= 1
-        
-def kembali_2():
-    if st.session_state.page > 1:
-        st.session_state.page -= 2
+def kembali():    
+    st.session_state.page -= 1
+def kembali_2():    
+    st.session_state.page -= 2
 
 
 if st.session_state.page == 1:
