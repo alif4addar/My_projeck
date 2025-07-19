@@ -502,7 +502,7 @@ elif st.session_state.page == 4:
 
 elif st.session_state.page == 5:
     st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)    
-    if st.button("Back"):
-        st.session_state.page == 1:
+    if st.button("Home"):
+        st.session_state.page == 1
     
     
