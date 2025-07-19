@@ -288,7 +288,7 @@ if st.button("🔍 Tampilkan Menu"):
 if st.session_state.show_sidebar:
     with st.sidebar:
         menu = option_menu(
-            menu_title="Kebutuhan Kimia 🌟",
+            menu_title="Kalibrasi Ketidakpastian🌟",
             options=[
                 "🏠 Home", "📋 Cara Penggunaan Web Aplikasi", "📑 Syarat Yang Harus Dipenuhi",
                 "🧮 Perhitungan", "end Page"
