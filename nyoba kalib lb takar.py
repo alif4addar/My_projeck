@@ -280,6 +280,10 @@ if not st.session_state.show_sidebar:
         </style>
     """, unsafe_allow_html=True)
 
+if st.button("🔍 Tampilkan Menu"):
+    st.session_state.show_sidebar = True
+    st.rerun()
+
 # --- SIDEBAR MENU ---
 if st.session_state.show_sidebar:
     with st.sidebar:
