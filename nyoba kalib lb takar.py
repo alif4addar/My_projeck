@@ -258,16 +258,17 @@ if "page" not in st.session_state:
     st.session_state.page = 1
 
 # Fungsi navigasi
-def next_page():
+def home():
+    st.session_state.page == 1
+def lanjut():
     st.session_state.page += 1
-    
-def next_page_2():
+def lanjut_2():
     st.session_state.page += 2
-
-def prev_page():
+def kembali():
     if st.session_state.page > 1:
         st.session_state.page -= 1
-def prev_page_2():
+        
+def kembali_2():
     if st.session_state.page > 1:
         st.session_state.page -= 2
 
@@ -279,11 +280,11 @@ if st.session_state.page == 1:
     col_pp, col_space, col_next = st.columns([3, 6, 2])
     with col_pp:
         if st.button("Petunjuk Penggunaan"):
-            next_page()
+            lanjut()
             st.stop()
     with col_next:
         if st.button("Mulai"):
-            next_page_2()
+            lanjut_2()
   
 
 #====PP===
@@ -291,7 +292,7 @@ elif st.session_state.page == 2:
     st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
     st.markdown('<div class="app-card"><p>pada halaman pertana</p></div>', unsafe_allow_html=True)
     if st.button("Mulai"):
-        next_page()
+        lanjut()
 
 
 elif st.session_state.page == 3:
@@ -304,11 +305,11 @@ elif st.session_state.page == 3:
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
     with col_kembali:
         if st.button("Back"):
-            prev_page_2()
+            kembali_2()
             st.stop()
     with col_lanjut:
         if st.button("Next"):
-            next_page()
+            lanjut()
 
 
 elif st.session_state.page == 4:
@@ -491,11 +492,11 @@ elif st.session_state.page == 4:
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
     with col_kembali:
         if st.button("Back"):
-            st.session_state.page -= 1
+            kembali()
             st.stop()
     with col_lanjut:
         if st.button("Next"): 
-            next_page()
+            lanjut()
             
    
             
@@ -503,6 +504,7 @@ elif st.session_state.page == 4:
 elif st.session_state.page == 5:
     st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)    
     if st.button("Home"):
-        st.session_state.page == 1
+        home()
+        
     
     
