@@ -285,7 +285,6 @@ if st.session_state.page == 1:
     with col_pp:
         if st.button("Petunjuk Penggunaan"):
             lanjut()
-            st.stop()
     with col_next:
         if st.button("Mulai"):
             lanjut_2()
@@ -310,7 +309,6 @@ elif st.session_state.page == 3:
     with col_kembali:
         if st.button("Back"):
             kembali_2()
-            st.stop()
     with col_lanjut:
         if st.button("Next"):
             lanjut()
@@ -340,8 +338,6 @@ elif st.session_state.page == 4:
     ]
     
     # jmlh baris
-
-    
     col1, col2, col3 = st.columns([3, 6, 3])
     with col1:
         st.button(" + Tambah Baris", on_click=add_row)
@@ -494,8 +490,8 @@ elif st.session_state.page == 4:
         
 elif st.session_state.page == 5:
     st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)    
-    if st.button("Home"):
-        home()
+    if st.button("Home", on_click=home ):
+     
         
     
     
