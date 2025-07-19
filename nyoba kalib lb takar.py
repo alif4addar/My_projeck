@@ -274,12 +274,12 @@ if st.session_state.page == 1:
 # --- Header ---
     st.markdown('<div class="header-section"><h1>Aplikasi Kalibrasi Volume Labu Takar</h1></div>', unsafe_allow_html=True)
 
+     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
+    with col_kembali:
+        if st.button("Petunjuk Penggunaan"): next_page()
+    with col_lanjut:
+        if st.button("Next"): next_page_2()
   
-    if st.button("Petunjuk Penggunaan"):
-        next_page()
-    
-    else st.button("Mulai"):
-        next_page_2()
 
 #====PP===
 elif st.session_state.page == 2:
