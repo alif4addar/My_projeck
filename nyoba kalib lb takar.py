@@ -312,6 +312,7 @@ elif st.session_state.page == 3:
 
 
 elif st.session_state.page == 4:
+    
     # Bagian Input VKonvensional
     st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
     st.markdown('<div class="app-card">', unsafe_allow_html=True)
@@ -493,9 +494,7 @@ elif st.session_state.page == 4:
         if st.button("Back"):
             back()
             st.stop()
-    with col_lanjut:
-        if st.button("Next"): 
-            lanjut()
+    
             
    
             
