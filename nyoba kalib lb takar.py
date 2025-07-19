@@ -254,28 +254,56 @@ st.markdown("""
 
 
 # Inisialisasi
-if "page" not in st.session_state:
-    st.session_state.page = 1
 if "rows" not in st.session_state:
     st.session_state.rows = 1
-# Fungsi navigasi
-def home():
-    st.session_state.page -= 4
-def lanjut():
-    st.session_state.page += 1
-def lanjut_2():
-    st.session_state.page += 2
-def kembali():    
-    if st.session_state.page > 1:
-        st.session_state.page -= 1
-def kembali_2():
-    if st.session_state.page > 1:
-        st.session_state.page -= 2   
+    
 def add_row():
     st.session_state.rows += 1 
 def remove_row():
     if st.session_state.rows > 1:
         st.session_state.rows -= 1
+
+
+# --- SESSION STATE ---
+if "show_sidebar" not in st.session_state:
+    st.session_state.show_sidebar = False
+if "menu_selected" not in st.session_state:
+    st.session_state.menu_selected = "🏠 Home"
+
+# --- SEMBUNYIKAN SIDEBAR DI AWAL ---
+if not st.session_state.show_sidebar:
+    st.markdown("""
+        <style>
+        [data-testid="stSidebar"] {
+            display: none;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+# --- SIDEBAR MENU ---
+if st.session_state.show_sidebar:
+    with st.sidebar:
+        menu = option_menu(
+            menu_title="Kebutuhan Kimia 🌟",
+            options=[
+                "🏠 Home", "⚗ Reaksi Kimia", "🧪 Stoikiometri",
+                "🧫 Konsentrasi Larutan", "💧 pH dan pOH",
+                "🧬 Tabel Periodik", "🔄 Konversi Satuan",
+                "📈 Regresi Linier", "📖 About"
+            ],
+            icons=[
+                "", "", "",
+                "", "",
+                "", "",
+                "", ""
+            ],
+            default_index=0
+        )
+        st.session_state.menu_selected = menu
+
+# --- TOMBOL UNTUK MEMUNCULKAN SIDEBAR ---
+selected = st.session_state.menu_selected
+
 
 if st.session_state.page == 1:
 # --- Header ---
