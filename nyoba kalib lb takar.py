@@ -282,7 +282,8 @@ if st.session_state.page == 1:
             next_page()
             st.stop()
     with col_next:
-        if st.button("Mulai"): next_page_2()
+        if st.button("Mulai"):
+            next_page_2()
   
 
 #====PP===
@@ -302,10 +303,12 @@ elif st.session_state.page == 3:
 
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
     with col_kembali:
-        if st.button("Back"): prev_page_2()
+        if st.button("Back"):
+            prev_page_2()
             st.stop()
     with col_lanjut:
-        if st.button("Next"): next_page()
+        if st.button("Next"):
+            next_page()
 
 
 elif st.session_state.page == 4:
