@@ -483,7 +483,7 @@ elif st.session_state.page == 4:
                 st.error(f"Terjadi kesalahan saat perhitungan lanjutan: {e}")
 
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
-     with col_lanjut:
+    with col_lanjut:
         if st.button("Next"): next_page()
     
     with col_kembali:
