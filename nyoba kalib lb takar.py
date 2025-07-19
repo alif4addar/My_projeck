@@ -484,12 +484,10 @@ elif st.session_state.page == 4:
 
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
      with col_lanjut:
-        if st.button("Next"):
-            next_page()
+        if st.button("Next"): next_page()
     
     with col_kembali:
-        if st.button("Back"):
-            prev_page()
+        if st.button("Back"): prev_page()
             
 
 elif st.session_state.page == 5:
