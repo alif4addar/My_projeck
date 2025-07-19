@@ -274,30 +274,32 @@ if st.session_state.page == 1:
 # --- Header ---
     st.markdown('<div class="header-section"><h1>Aplikasi Kalibrasi Volume Labu Takar</h1></div>', unsafe_allow_html=True)
 
-    col_pp, col_space, col_next = st.columns([2, 6, 2])
+    col_pp, col_space, col_next = st.columns([3, 6, 2])
     with col_pp:
         if st.button("Petunjuk Penggunaan"): next_page()
     with col_next:
-        if st.button("Next"): next_page_2()
+        if st.button("Mulai"): next_page_2()
   
 
 #====PP===
 elif st.session_state.page == 2:
     st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
+    st.markdown('<div class="app-card"><p>pada halaman pertana</p></div>', unsafe_allow_html=True)
     if st.button("Mulai"):
         next_page()
 
 
 elif st.session_state.page == 3:
-      st.markdown("""
+    st.markdown("""
         <div class="hero-section">
             <p>Alat komprehensif ini membantu Anda melakukan perhitungan kalibrasi volume labu takar secara akurat, termasuk analisis ketidakpastian sesuai standar metrologi.</p>           
         </div>
     """, unsafe_allow_html=True)
 
-    
+    if st.button("Next"):
+        next_page()
 
-elif st.session_state.page == 3:
+elif st.session_state.page == 4:
 
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
     with col_kembali:
