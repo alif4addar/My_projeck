@@ -491,7 +491,7 @@ elif st.session_state.page == 4:
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
     with col_kembali:
         if st.button("Back"):
-            prev_page()
+            st.session_state.page == 3:
             st.stop()
     with col_lanjut:
         if st.button("Next"): 
@@ -502,6 +502,7 @@ elif st.session_state.page == 4:
 
 elif st.session_state.page == 5:
     st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)    
-
+    if st.button("Back"):
+        st.session_state.page == 1:
     
     
