@@ -291,7 +291,7 @@ elif st.session_state.page == 2:
 
     ketelitian_lb = st.number_input("Masukkan Ketelitian Labu Takar (mL)", min_value=0.0, step=0.0001, format="%.4f")
 
-# Template input tabel kosong
+# Template input tabel
     st.markdown('<div class="app-card">', unsafe_allow_html=True)
     st.markdown("<h3 style='color:#5F6F65;'>Input Data Pengukuran</h3>", unsafe_allow_html=True)
     cols = [
@@ -303,7 +303,7 @@ elif st.session_state.page == 2:
         "Kelembaban (%)"
     ]
     
-    # Kontrol jumlah baris
+    # jmlh baris
     if "rows" not in st.session_state:
         st.session_state.rows = 1
     
@@ -314,10 +314,10 @@ elif st.session_state.page == 2:
         if st.session_state.rows > 1:
             st.session_state.rows -= 1
     
-    col1, col2 = st.columns(2)
+    col1, col2, col3, col4 = st.columns(2)
     with col1:
         st.button(" + Tambah Baris", on_click=add_row)
-    with col2:
+    with col4:
         st.button(" - Hapus Baris", on_click=remove_row)
     
     def_data = [["" for _ in range(len(cols))] for _ in range(st.session_state.rows)]
@@ -357,7 +357,7 @@ elif st.session_state.page == 2:
         except Exception as e:
             st.error(f"Terjadi kesalahan saat menghitung rata-rata: {e}")
     
-    # Input tambahan untuk ketidakpastian
+    # Input untuk ketidakpastian
     CC = ["Timbangan","Termometer Air","Termometer Udara","Barometer Udara","Hygrometer"]
     satuan = ["g", "C", "C", "mmHg", "%"]
     st.markdown('<div class="app-card">', unsafe_allow_html=True)
@@ -382,7 +382,7 @@ elif st.session_state.page == 2:
     st.markdown('<div class="app-card">', unsafe_allow_html=True)
     st.markdown("<h3 style='color:#5F6F65;'>Perhitungan Ketidakpastian</h3>", unsafe_allow_html=True)
     
-    # Tombol khusus menghitung ketidakpastian
+    # Tombol ngitung ketidakpastian
     if "rata_pengukuran" in st.session_state:
         rata = st.session_state.rata_pengukuran
     
