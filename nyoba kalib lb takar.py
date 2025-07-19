@@ -296,8 +296,11 @@ elif st.session_state.page == 3:
         </div>
     """, unsafe_allow_html=True)
 
-    if st.button("Next"):
-        next_page()
+    col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
+    with col_kembali:
+        if st.button("Back"): prev_page()
+    with col_lanjut:
+        if st.button("Next"): next_page()
 
 elif st.session_state.page == 4:
 
