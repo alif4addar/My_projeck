@@ -303,11 +303,7 @@ elif st.session_state.page == 2:
         "Kelembaban (%)"
     ]
     
-   
-    
-    def_data = [["" for _ in range(len(cols))] for _ in range(st.session_state.rows)]
-
-     # jmlh baris
+    # jmlh baris
     if "rows" not in st.session_state:
         st.session_state.rows = 1
     
@@ -325,6 +321,7 @@ elif st.session_state.page == 2:
         st.button(" - Hapus Baris", on_click=remove_row)
     
     
+    def_data = [["" for _ in range(len(cols))] for _ in range(st.session_state.rows)]
     df = st.data_editor(pd.DataFrame(def_data, columns=cols), use_container_width=True, num_rows="dynamic")
     
     if st.button("Hitung Rata-rata Data Pengukuran"):
