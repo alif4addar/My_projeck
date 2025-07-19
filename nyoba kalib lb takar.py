@@ -14,6 +14,17 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# Inisialisasi halaman
+if "page" not in st.session_state:
+    st.session_state.page = 1
+
+# Fungsi navigasi
+def next_page():
+    st.session_state.page += 1
+
+def prev_page():
+    if st.session_state.page > 1:
+        st.session_state.page -= 1
 
 st.markdown("""
     <style>
@@ -253,6 +264,20 @@ st.markdown("""
     
     </style>
 """, unsafe_allow_html=True)
+
+if st.session_state.page == 1:
+    st.markdown('<div class="header-section"><h1>Aplikasi Kalibrasi Volume Labu Takar</h1></div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="hero-section">
+            <h2>Selamat Datang 👋</h2>
+            <p>Hitung volume sebenarnya dan ketidakpastian labu takar Anda secara akurat.</p>
+        </div>
+    """, unsafe_allow_html=True)
+    st.markdown('<div class="app-card"><p>Tekan "Mulai" untuk melanjutkan ke input data pengukuran.</p></div>', unsafe_allow_html=True)
+    if st.button("➡ Mulai"):
+        next_page()
+
+
 
 # --- Header ---
 st.markdown('<div class="header-section"><h1>Aplikasi Kalibrasi Volume Labu Takar</h1></div>', unsafe_allow_html=True)
