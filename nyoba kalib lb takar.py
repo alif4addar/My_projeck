@@ -277,17 +277,17 @@ if st.session_state.page == 1:
             <p>Alat komprehensif ini membantu Anda melakukan perhitungan kalibrasi volume labu takar secara akurat, termasuk analisis ketidakpastian sesuai standar metrologi.</p>
         </div>
     """, unsafe_allow_html=True)
-    if st.button("➡ Mulai"):
+    if st.button("Mulai"):
         next_page()
 
 
 elif st.session_state.page == 2:
 
-    col_prev, col_next = st.columns(2)
-    with col_prev:
-        if st.button("⬅ Kembali"): prev_page()
-    with col_next:
-        if st.button("➡ Lanjut"): next_page()
+    col_kembali, col_space, col_lanjut = st.columns([1, 6, 1])
+    with col_kembali:
+        if st.button("Back"): prev_page()
+    with col_lanjut:
+        if st.button("Next"): next_page()
     
 # --- Bagian Input Volume Konvensional --- 
     st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
