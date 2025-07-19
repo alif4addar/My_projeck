@@ -264,6 +264,8 @@ def lanjut():
     st.session_state.page += 1
 def lanjut_2():
     st.session_state.page += 2
+def back():    
+    st.session_state.page -= 1
 def kembali():    
     st.session_state.page -= 1
 def kembali_2():    
@@ -489,7 +491,7 @@ elif st.session_state.page == 4:
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
     with col_kembali:
         if st.button("Back"):
-            kembali()
+            back()
             st.stop()
     with col_lanjut:
         if st.button("Next"): 
