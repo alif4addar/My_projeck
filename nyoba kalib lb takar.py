@@ -306,13 +306,9 @@ elif st.session_state.page == 3:
 
 elif st.session_state.page == 4:
 
-    col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
-    with col_kembali:
-        if st.button("Back"): prev_page()
-    with col_lanjut:
-        if st.button("Next"): next_page()
     
-# --- Bagian Input Volume Konvensional --- 
+    
+# Bagian Input VKonvensional
     st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
     st.markdown('<div class="app-card">', unsafe_allow_html=True)
 
@@ -487,3 +483,9 @@ elif st.session_state.page == 4:
     
             except Exception as e:
                 st.error(f"Terjadi kesalahan saat perhitungan lanjutan: {e}")
+
+    col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
+    with col_kembali:
+        if st.button("Back"): prev_page()
+    with col_lanjut:
+        if st.button("Next"): next_page()
