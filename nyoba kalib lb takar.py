@@ -293,7 +293,7 @@ if st.session_state.page == 1:
 #====PP===
 elif st.session_state.page == 2:
     st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
-    st.markdown('<div class="app-card"><p>pada halaman pertana</p></div>', unsafe_allow_html=True)
+    st.markdown('<div class="app-card"><p>pada halaman pertama</p></div>', unsafe_allow_html=True)
     if st.button("Mulai"):
         lanjut()
 
