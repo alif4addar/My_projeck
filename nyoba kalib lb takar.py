@@ -286,16 +286,11 @@ if st.session_state.show_sidebar:
         menu = option_menu(
             menu_title="Kebutuhan Kimia 🌟",
             options=[
-                "🏠 Home", "⚗ Reaksi Kimia", "🧪 Stoikiometri",
-                "🧫 Konsentrasi Larutan", "💧 pH dan pOH",
-                "🧬 Tabel Periodik", "🔄 Konversi Satuan",
-                "📈 Regresi Linier", "📖 About"
+                "🏠 Home", "📋 Cara Penggunaan Web Aplikasi", "📑 Syarat Yang Harus Dipenuhi",
+                "🧮 Perhitungan", "end Page"
             ],
             icons=[
-                "", "", "",
-                "", "",
-                "", "",
-                "", ""
+                "", "", "", "", ""
             ],
             default_index=0
         )
@@ -305,44 +300,25 @@ if st.session_state.show_sidebar:
 selected = st.session_state.menu_selected
 
 
-if st.session_state.page == 1:
 # --- Header ---
+if selected == "🏠 Home"
     st.markdown('<div class="header-section"><h1>Aplikasi Kalibrasi Volume Labu Takar</h1></div>', unsafe_allow_html=True)
 
-    col_pp, col_space, col_next = st.columns([3, 6, 2])
-    with col_pp:
-        if st.button("Petunjuk Penggunaan"):
-            lanjut()
-    with col_next:
-        if st.button("Mulai"):
-            lanjut_2()
-  
-
 #====PP===
-elif st.session_state.page == 2:
+elif selected == "📋 Cara Penggunaan Web Aplikasi"
     st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
     st.markdown('<div class="app-card"><p>pada halaman pertama</p></div>', unsafe_allow_html=True)
-    if st.button("Mulai"):
-        lanjut()
 
 
-elif st.session_state.page == 3:
+elif selected == "📑 Syarat Yang Harus Dipenuhi"
     st.markdown("""
         <div class="hero-section">
             <p>Alat komprehensif ini membantu Anda melakukan perhitungan kalibrasi volume labu takar secara akurat, termasuk analisis ketidakpastian sesuai standar metrologi.</p>           
         </div>
     """, unsafe_allow_html=True)
 
-    col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
-    with col_kembali:
-        if st.button("Back"):
-            kembali_2()
-    with col_lanjut:
-        if st.button("Next"):
-            lanjut()
 
-
-elif st.session_state.page == 4:
+elif selected == "🧮 Perhitungan"
     
     # Bagian Input VKonvensional
     st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
@@ -510,18 +486,10 @@ elif st.session_state.page == 4:
             except Exception as e:
                 st.error(f"Terjadi kesalahan saat perhitungan lanjutan: {e}")
 
-
-    if st.button("Back"):
-        kembali()
-    if st.button("Next"):
-        lanjut()
    
-elif st.session_state.page == 5:
-    st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)    
-    if st.button("Home"):
-        home()
-    if st.button("Back"):
-        kembali()
+elif selected == "end Page"
+    st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)
+       
         
         
     
