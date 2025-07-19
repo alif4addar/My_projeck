@@ -260,6 +260,9 @@ if "page" not in st.session_state:
 # Fungsi navigasi
 def next_page():
     st.session_state.page += 1
+    
+def next_page_2():
+    st.session_state.page += 2
 
 def prev_page():
     if st.session_state.page > 1:
@@ -273,14 +276,19 @@ if st.session_state.page == 1:
 
   
     if st.button("Petunjuk Penggunaan"):
-        st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
-        if st.button("Mulai"):
-            next_page()
+        next_page()
     
     else st.button("Mulai"):
+        next_page_2()
+
+#====PP===
+elif st.session_state.page == 2:
+    st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
+    if st.button("Mulai"):
         next_page()
 
-elif st.session_state.page == 2:
+
+elif st.session_state.page == 3:
       st.markdown("""
         <div class="hero-section">
             <p>Alat komprehensif ini membantu Anda melakukan perhitungan kalibrasi volume labu takar secara akurat, termasuk analisis ketidakpastian sesuai standar metrologi.</p>           
