@@ -271,17 +271,25 @@ if st.session_state.page == 1:
 # --- Header ---
     st.markdown('<div class="header-section"><h1>Aplikasi Kalibrasi Volume Labu Takar</h1></div>', unsafe_allow_html=True)
 
-    st.markdown("""
-        <div class="hero-section">
-            <h2>Hitung Volume Sebenarnya dan Ketidakpastian Labu Takar Anda</h2>
-            <p>Alat komprehensif ini membantu Anda melakukan perhitungan kalibrasi volume labu takar secara akurat, termasuk analisis ketidakpastian sesuai standar metrologi.</p>
-        </div>
-    """, unsafe_allow_html=True)
-    if st.button("Mulai"):
+  
+    if st.button("Petunjuk Penggunaan"):
+        st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
+        if st.button("Mulai"):
+        next_page()
+    
+    else st.button("Mulai"):
         next_page()
 
-
 elif st.session_state.page == 2:
+      st.markdown("""
+        <div class="hero-section">
+            <p>Alat komprehensif ini membantu Anda melakukan perhitungan kalibrasi volume labu takar secara akurat, termasuk analisis ketidakpastian sesuai standar metrologi.</p>           
+        </div>
+    """, unsafe_allow_html=True)
+
+    
+
+elif st.session_state.page == 3:
 
     col_kembali, col_space, col_lanjut = st.columns([2, 6, 2])
     with col_kembali:
