@@ -275,7 +275,7 @@ if st.session_state.page == 1:
     if st.button("Petunjuk Penggunaan"):
         st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
         if st.button("Mulai"):
-        next_page()
+            next_page()
     
     else st.button("Mulai"):
         next_page()
