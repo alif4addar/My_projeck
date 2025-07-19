@@ -314,10 +314,10 @@ elif st.session_state.page == 2:
         if st.session_state.rows > 1:
             st.session_state.rows -= 1
     
-    col1, col2, col3, col4 = st.columns(2)
+    col1, col2, col3 = st.columns([2, 6, 2])
     with col1:
         st.button(" + Tambah Baris", on_click=add_row)
-    with col4:
+    with col3:
         st.button(" - Hapus Baris", on_click=remove_row)
     
     def_data = [["" for _ in range(len(cols))] for _ in range(st.session_state.rows)]
