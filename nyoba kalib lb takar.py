@@ -295,9 +295,6 @@ if st.session_state.show_sidebar:
                 "🏠 Home", "📋 Cara Penggunaan Web Aplikasi", "📑 Syarat Yang Harus Dipenuhi",
                 "🧮 Perhitungan", "end Page"
             ],
-            icons=[
-                "", "", "", "", ""
-            ],
             default_index=0
         )
         st.session_state.menu_selected = menu
