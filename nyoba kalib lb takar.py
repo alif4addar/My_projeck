@@ -265,100 +265,65 @@ def remove_row():
         st.session_state.rows -= 1
 
 
-# --- SESSION STATE ---
-if "show_sidebar" not in st.session_state:
-    st.session_state.show_sidebar = False
-if "menu_selected" not in st.session_state:
-    st.session_state.menu_selected = "🏠 Home"
 
-# --- SEMBUNYIKAN SIDEBAR DI AWAL ---
-if not st.session_state.show_sidebar:
-    st.markdown("""
-        <style>
-        [data-testid="stSidebar"] {
-            display: none;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-
-if st.button("🔍 Tampilkan Menu"):
-    st.session_state.show_sidebar = True
-    st.rerun()
-
-# --- SIDEBAR MENU ---
-if st.session_state.show_sidebar:
-    with st.sidebar:
-        menu = option_menu(
-            menu_title="Kalibrasi Ketidakpastian🌟",
-            options=[
-                "🏠 Home", "📋 Cara Penggunaan Web Aplikasi", "📑 Syarat Yang Harus Dipenuhi",
-                "🧮 Perhitungan", "end Page"
-            ],
-            default_index=0
-        )
-        st.session_state.menu_selected = menu
-
-# --- TOMBOL UNTUK MEMUNCULKAN SIDEBAR ---
-selected = st.session_state.menu_selected
 
 
 # --- Header ---
-if selected == "🏠 Home":
-    st.markdown('<div class="header-section"><h1>Aplikasi Kalibrasi Volume Labu Takar</h1></div>', unsafe_allow_html=True)
+
+st.markdown('<div class="header-section"><h1>Aplikasi Kalibrasi Volume Labu Takar</h1></div>', unsafe_allow_html=True)
 
 #====PP===
-elif selected == "📋 Cara Penggunaan Web Aplikasi":
-    st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
-    st.markdown('<div class="app-card"><p>pada halaman pertama</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="header-section"><h1>Cara Penggunaan</h1></div>', unsafe_allow_html=True)
+st.markdown('<div class="app-card"><p>pada halaman pertama</p></div>', unsafe_allow_html=True)
 
 
-elif selected == "📑 Syarat Yang Harus Dipenuhi":
-    st.markdown("""
-        <div class="hero-section">
-            <p>Alat komprehensif ini membantu Anda melakukan perhitungan kalibrasi volume labu takar secara akurat, termasuk analisis ketidakpastian sesuai standar metrologi.</p>           
-        </div>
-    """, unsafe_allow_html=True)
+
+st.markdown("""
+    <div class="hero-section">
+        <p>Alat komprehensif ini membantu Anda melakukan perhitungan kalibrasi volume labu takar secara akurat, termasuk analisis ketidakpastian sesuai standar metrologi.</p>           
+    </div>
+""", unsafe_allow_html=True)
 
 
-elif selected == "🧮 Perhitungan":
+
     
     # Bagian Input VKonvensional
-    st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
-    st.markdown('<div class="app-card">', unsafe_allow_html=True)
+st.markdown("<h1 style='color:#5F6F65;'>Aplikasi Kalibrasi Volume - Labu Takar</h1>", unsafe_allow_html=True)
+st.markdown('<div class="app-card">', unsafe_allow_html=True)
 
     # Input volume konvensional
-    v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=25.0,  format="%.2f")
+v_konven = st.number_input("Masukkan Volume Konvensional (mL)", min_value=0.0, step=25.0,  format="%.2f")
 
-    ketelitian_lb = st.number_input("Masukkan Ketelitian Labu Takar (mL)", min_value=0.0, step=0.001, format="%.4f")
+ketelitian_lb = st.number_input("Masukkan Ketelitian Labu Takar (mL)", min_value=0.0, step=0.001, format="%.4f")
 
     # Template input tabel
-    st.markdown('<div class="app-card">', unsafe_allow_html=True)
-    st.markdown("<h3 style='color:#5F6F65;'>Input Data Pengukuran</h3>", unsafe_allow_html=True)
-    cols = [
+st.markdown('<div class="app-card">', unsafe_allow_html=True)
+st.markdown("<h3 style='color:#5F6F65;'>Input Data Pengukuran</h3>", unsafe_allow_html=True)
+cols = [
         "Bobot Kosong (g)",
         "Bobot Isi (g)",
         "Suhu Air (C)",
         "Suhu Udara (C)",
         "Tekanan Udara (mmHg)",
         "Kelembaban (%)"
-    ]
+]
     
     # jmlh baris
-    col1, col2, col3 = st.columns([3, 6, 3])
-    with col1:
-        st.button(" + Tambah Baris", on_click=add_row)
-    with col3:
-        st.button(" - Hapus Baris", on_click=remove_row)
+col1, col2, col3 = st.columns([3, 6, 3])
+with col1:
+    st.button(" + Tambah Baris", on_click=add_row)
+with col3:
+    st.button(" - Hapus Baris", on_click=remove_row)
     
     
-    def_data = [["" for _ in range(len(cols))] for _ in range(st.session_state.rows)]
-    df = st.data_editor(pd.DataFrame(def_data, columns=cols), use_container_width=True, num_rows="dynamic")
+def_data = [["" for _ in range(len(cols))] for _ in range(st.session_state.rows)]
+df = st.data_editor(pd.DataFrame(def_data, columns=cols), use_container_width=True, num_rows="dynamic")
     
-    if st.button("Hitung Rata-rata Data Pengukuran"):
-        try:
-            if df.isnull().values.any() or (df == "").values.any():
-                st.warning("⚠️ Semua sel harus diisi sebelum menghitung rata-rata.")
-            else:
+if st.button("Hitung Rata-rata Data Pengukuran"):
+    try:
+        if df.isnull().values.any() or (df == "").values.any():
+            st.warning("⚠️ Semua sel harus diisi sebelum menghitung rata-rata.")
+        else:
                 kosong = df["Bobot Kosong (g)"].astype(float).tolist()
                 isi = df["Bobot Isi (g)"].astype(float).tolist()
                 suhu_air = df["Suhu Air (C)"].astype(float).tolist()
@@ -385,18 +350,18 @@ elif selected == "🧮 Perhitungan":
                 for k, v in rata.items():
                     st.write(f"{k}: **{v:.4f}**")
     
-        except Exception as e:
-            st.error(f"Terjadi kesalahan saat menghitung rata-rata: {e}")
+    except Exception as e:
+        st.error(f"Terjadi kesalahan saat menghitung rata-rata: {e}")
     
     # Input untuk ketidakpastian
-    CC = ["Timbangan","Termometer Air","Termometer Udara","Barometer Udara","Hygrometer"]
-    satuan = ["g", "C", "C", "mmHg", "%"]
-    st.markdown('<div class="app-card">', unsafe_allow_html=True)
-    st.markdown("<h3 style='color:#5F6F65;'>Input Alat Ukur</h3>", unsafe_allow_html=True)
-    lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0000, step=0.0001, format="%.4f")
-    st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
+CC = ["Timbangan","Termometer Air","Termometer Udara","Barometer Udara","Hygrometer"]
+satuan = ["g", "C", "C", "mmHg", "%"]
+st.markdown('<div class="app-card">', unsafe_allow_html=True)
+st.markdown("<h3 style='color:#5F6F65;'>Input Alat Ukur</h3>", unsafe_allow_html=True)
+lop = st.number_input("Masukkan Nilai LOP Timbangan", value=0.0000, step=0.0001, format="%.4f")
+st.markdown("Masukkan nilai NST, U95, dan K untuk alat ukur:")
     
-    col_nst, col_u95, col_k = st.columns(3)
+col_nst, col_u95, col_k = st.columns(3)
     with col_nst:
         st.markdown("<h3 style='color:#5F6F65; font-size: 24px;'>NST</h3>", unsafe_allow_html=True)
         nst = [st.number_input(f" {label} ( {satuan[i]} )", value=0.0000, key=f"nst_{i}", step=0.0001, format="%.4f") for i, label in enumerate(CC)]
@@ -410,8 +375,8 @@ elif selected == "🧮 Perhitungan":
     
     
     
-    st.markdown('<div class="app-card">', unsafe_allow_html=True)
-    st.markdown("<h3 style='color:#5F6F65;'>Perhitungan Ketidakpastian</h3>", unsafe_allow_html=True)
+st.markdown('<div class="app-card">', unsafe_allow_html=True)
+st.markdown("<h3 style='color:#5F6F65;'>Perhitungan Ketidakpastian</h3>", unsafe_allow_html=True)
     
     # Tombol ngitung ketidakpastian
     if "rata_pengukuran" in st.session_state:
@@ -489,8 +454,8 @@ elif selected == "🧮 Perhitungan":
                 st.error(f"Terjadi kesalahan saat perhitungan lanjutan: {e}")
 
    
-elif selected == "end Page":
-    st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)
+
+st.markdown('<div class="header-section"><h1>Terimakasih</h1></div>', unsafe_allow_html=True)
        
         
         
