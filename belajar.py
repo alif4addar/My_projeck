@@ -23,55 +23,24 @@ cols = [
 ]
 
 # Inisialisasi session_state
-if "rows" not in st.session_state:
-    st.session_state.rows = 3
-
 if "data_pengukuran" not in st.session_state:
-    st.session_state.data_pengukuran = pd.DataFrame([["" for _ in cols] for _ in range(st.session_state.rows)], columns=cols)
+    st.session_state.data_pengukuran = pd.DataFrame([["" for _ in cols]], columns=cols)
 
-# Fungsi tambah/hapus/reset baris
-def add_row():
-    st.session_state.rows += 1
-    empty_row = pd.DataFrame([["" for _ in cols]], columns=cols)
-    st.session_state.data_pengukuran = pd.concat([st.session_state.data_pengukuran, empty_row], ignore_index=True)
+# Tombol untuk reset semua data
+if st.button("🗑️ Hapus Semua Inputan"):
+    st.session_state.data_pengukuran = pd.DataFrame([["" for _ in cols]], columns=cols)
+    st.rerun()
 
-def remove_row():
-    if st.session_state.rows > 1:
-        st.session_state.rows -= 1
-        st.session_state.data_pengukuran = st.session_state.data_pengukuran.iloc[:-1]
-
-def reset_data():
-    st.session_state.rows = 3
-    st.session_state.data_pengukuran = pd.DataFrame([["" for _ in cols] for _ in range(st.session_state.rows)], columns=cols)
-
-# Judul
-st.markdown("<h3 style='color:#5F6F65;'>Input Data Pengukuran</h3>", unsafe_allow_html=True)
-
-# Tombol kontrol baris
-col1, col2, col3 = st.columns([3, 6, 3])
-with col1:
-    st.button(" + Tambah Baris", on_click=add_row)
-with col3:
-    st.button(" - Hapus Baris", on_click=remove_row)
-
-# Editor data utama
+# Editor data
 df = st.data_editor(
     st.session_state.data_pengukuran,
-    num_rows="dynamic",
     use_container_width=True,
+    num_rows="dynamic",
     key="data_editor"
 )
 
-if not df.equals(st.session_state.data_pengukuran):
-    st.session_state.data_pengukuran = df.copy()
-
-# Simpan hasil edit ke session_state
+# Simpan hasil editor ke session_state
 st.session_state.data_pengukuran = df
-
-# Tombol hapus semua input
-if st.button("🗑️ Hapus Semua Inputan"):
-    reset_data()
-    st.rerun()
 
 # Tombol hitung rata-rata
 if st.button("Hitung Rata-rata Data Pengukuran"):
@@ -89,13 +58,13 @@ if st.button("Hitung Rata-rata Data Pengukuran"):
             hasil = [b - a for a, b in zip(kosong, isi)]
 
             rata = {
-                "Bobot Kosong (g)": sum(kosong)/len(kosong),
-                "Bobot Isi (g)": sum(isi)/len(isi),
-                "Bobot Isi (Hasil) (g)": sum(hasil)/len(hasil),
-                "Suhu Air (C)": sum(suhu_air)/len(suhu_air),
-                "Suhu Udara (C)": sum(suhu_udara)/len(suhu_udara),
-                "Tekanan Udara (mmHg)": sum(tekanan)/len(tekanan),
-                "Kelembaban (%)": sum(kelembaban)/len(kelembaban),
+                "Bobot Kosong (g)": sum(kosong) / len(kosong),
+                "Bobot Isi (g)": sum(isi) / len(isi),
+                "Bobot Isi (Hasil) (g)": sum(hasil) / len(hasil),
+                "Suhu Air (C)": sum(suhu_air) / len(suhu_air),
+                "Suhu Udara (C)": sum(suhu_udara) / len(suhu_udara),
+                "Tekanan Udara (mmHg)": sum(tekanan) / len(tekanan),
+                "Kelembaban (%)": sum(kelembaban) / len(kelembaban),
                 "SEM Bobot Isi (g)": statistics.stdev(hasil) / math.sqrt(len(hasil))
             }
 
@@ -107,6 +76,7 @@ if st.button("Hitung Rata-rata Data Pengukuran"):
 
     except Exception as e:
         st.error(f"Terjadi kesalahan saat menghitung rata-rata: {e}")
+
 
 # Input untuk ketidakpastian
 CC = ["Timbangan","Termometer Air","Termometer Udara","Barometer Udara","Hygrometer"]
