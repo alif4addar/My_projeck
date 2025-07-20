@@ -379,7 +379,7 @@ st.markdown('<div class="app-card">', unsafe_allow_html=True)
 st.markdown("<h3 style='color:#5F6F65;'>Perhitungan Ketidakpastian</h3>", unsafe_allow_html=True)
     
     # Tombol ngitung ketidakpastian
-    if "rata_pengukuran" in st.session_state:
+if "rata_pengukuran" in st.session_state:
         rata = st.session_state.rata_pengukuran
     
         st.divider()
