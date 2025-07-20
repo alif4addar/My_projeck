@@ -62,6 +62,9 @@ df = st.data_editor(
     key="data_editor"
 )
 
+if not edited_df.equals(st.session_state.data_pengukuran):
+    st.session_state.data_pengukuran = edited_df.copy()
+
 # Simpan hasil edit ke session_state
 st.session_state.data_pengukuran = df
 
