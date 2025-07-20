@@ -79,6 +79,7 @@ st.session_state.data_pengukuran = edited_df
 # Tombol reset
 if st.button("🗑️ Hapus Semua Inputan"):
     reset_data()
+    st.rerun()
     st.success("Semua data berhasil dihapus.")
 
 # Hitung Rata-rata
