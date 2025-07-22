@@ -7,19 +7,19 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="expanded"
 )
+PRIMARY = "#1e355e"        # biru tua edukatif
+SECONDARY = "#f39c12"      # oranye aksen
+SUCCESS = "#27ae60"        # hijau sukses
+WARNING = "#e67e22"        # oranye peringatan
+DANGER = "#c0392b"         # merah error
+INFO = "#2980b9"           # biru info
 LIGHT_BG_ALPHA = 0.90       # transparansi konten utama
-MAX_WIDTH_PX = 900          # lebar konten
+MAX_WIDTH_PX = 900      
 
 # CSS Styling agar mirip web asli
-st.markdown("""
+st.markdown(f"""
     <style>
-    html, body, [class*="css"] {
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #f9f9f9;
-        color: #333;
-    }
-
-
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
     body {{
         background: url('https://raw.githubusercontent.com/Raixhaa/blank-app/main/dreamina-2025-07-15-91470000000000.png') no-repeat center center fixed;
@@ -36,37 +36,107 @@ st.markdown("""
         box-shadow: 0 4px 40px rgba(0,0,0,0.15);
     }}
 
-    .appview-container .main .block-container {
-        max-width: 900px;
-        padding: 2rem 1rem;
-        margin: auto;
-        background-color: rgba(255, 255, 255, 0.95);
-        border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+    h1, h2, h3, h4 {{
+        color: {PRIMARY};
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+    }}
 
-    button[kind="primary"] {
-        background-color: #3a86ff;
+    .edu-badge {{
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-left: 0.25rem;
         color: white;
-        border-radius: 8px;
-        padding: 0.5rem 1rem;
-        border: none;
-    }
+        background: {SECONDARY};
+    }}
 
-    button[kind="primary"]:hover {
-        background-color: #265dc3;
+    .result-card {{
+        background: white;
+        border-left: 8px solid {SUCCESS};
+        padding: 1.25rem 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }}
+
+    .warning-card {{
+        background: white;
+        border-left: 8px solid {WARNING};
+        padding: 1.25rem 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }}
+
+    .decision-path {{
+        font-family: monospace;
+        font-size: 0.85rem;
+        background: rgba(0,0,0,0.05);
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        line-height: 1.3;
+    }}
+
+    /* ===== Sidebar ===== */
+    section[data-testid="stSidebar"] > div:first-child {{
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(6px);
+        padding-top: 1rem;
+    }}
+
+    /* Button pill group container */
+    .nav-pill-container {{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }}
+    .nav-pill {{
+        width: 100%;
+        padding: 0.6rem 1rem;
+        border-radius: 999px;
+        border: 2px solid {PRIMARY}20;
+        background: white;
+        color: {PRIMARY};
+        font-weight: 600;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+    }}
+    .nav-pill:hover {{
+        border-color: {PRIMARY};
+        transform: translateX(2px) scale(1.01);
+    }}
+    .nav-pill.active {{
+        background: {PRIMARY};
         color: #fff;
-    }
+        border-color: {PRIMARY};
+        box-shadow: 0 0 0 2px {PRIMARY}40 inset;
+    }}
 
-    h1, h2 {
-        color: #0a3d62;
-    }
+    .nav-pill .emoji {{
+        margin-right: 0.35rem;
+    }}
 
-    [data-testid="stSidebar"] > div:first-child {
-        background-color: #e9f0ff;
-        padding: 1rem;
-        border-right: 1px solid #ccc;
-    }
+    /* Theory cards */
+    .theory-card {{
+        background:#ffffff;
+        border:1px solid #dfe4ea;
+        border-radius:16px;
+        padding:1.25rem 1.5rem;
+        margin-bottom:1.25rem;
+        box-shadow:0 1px 4px rgba(0,0,0,0.08);
+    }}
+    .theory-card h3 {{margin-top:0;}}
+    .theory-grid {{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:1rem;}}
+    .theory-tag {{display:inline-block;padding:2px 8px;font-size:0.75rem;border-radius:4px;background:{PRIMARY}15;color:{PRIMARY};margin-right:4px;margin-bottom:4px;}}
+    .safety-tag {{background:{DANGER}25;color:{DANGER};}}
+    .tip-tag {{background:{SECONDARY}25;color:{SECONDARY};}}
     </style>
 """, unsafe_allow_html=True)
 
