@@ -7,6 +7,8 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="expanded"
 )
+LIGHT_BG_ALPHA = 0.90       # transparansi konten utama
+MAX_WIDTH_PX = 900          # lebar konten
 
 # CSS Styling agar mirip web asli
 st.markdown("""
