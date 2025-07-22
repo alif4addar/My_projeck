@@ -17,6 +17,23 @@ st.markdown("""
         color: #333;
     }
 
+
+
+    body {{
+        background: url('https://raw.githubusercontent.com/Raixhaa/blank-app/main/dreamina-2025-07-15-91470000000000.png') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Inter', sans-serif;
+    }}
+
+    .stApp {{
+        background-color: rgba(255,255,255,{LIGHT_BG_ALPHA});
+        padding: 2rem 2rem 5rem 2rem;
+        border-radius: 24px;
+        max-width: {MAX_WIDTH_PX}px;
+        margin: auto;
+        box-shadow: 0 4px 40px rgba(0,0,0,0.15);
+    }}
+
     .appview-container .main .block-container {
         max-width: 900px;
         padding: 2rem 1rem;
