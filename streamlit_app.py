@@ -145,7 +145,7 @@ st.sidebar.title("🔍 Navigasi")
 st.sidebar.markdown("Pilih halaman atau fitur lain dari sini.")
 
 # Konten utama
-st.title("🔬 Web Identifikasi Custom")
+st.title("📐 Web Perhitungan Ketidakpastian Kalibrasi Alat")
 st.markdown("""
 Selamat datang di aplikasi identifikasi berbasis web!  
 Silakan ubah bagian ini sesuai kebutuhan Anda (bisa untuk pendidikan, analisis senyawa, deteksi sifat fisik, dan lainnya).
