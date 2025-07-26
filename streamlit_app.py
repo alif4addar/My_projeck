@@ -22,7 +22,7 @@ st.markdown(f"""
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
     body {{
-        background: url('https://raw.githubusercontent.com/Raixhaa/blank-app/main/dreamina-2025-07-15-91470000000000.png') no-repeat center center fixed;
+        background: url('https://ibb.co/fdhsmxZ0') no-repeat center center fixed;
         background-size: cover;
         font-family: 'Inter', sans-serif;
     }}
