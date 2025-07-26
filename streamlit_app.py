@@ -22,10 +22,11 @@ st.markdown(f"""
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
     body {{
-        background: url('https://raw.github.com/alif4addar/My_projeck/blob/main/bg%20baru%20no%20wn_PhotoGrid.png') no-repeat center center fixed;
+        background: url('https://raw.githubusercontent.com/alif4addar/My_projeck/main/bg%20baru%20no%20wn_PhotoGrid.png') no-repeat center center fixed;
         background-size: cover;
         font-family: 'Inter', sans-serif;
     }}
+
 
     .stApp {{
         background-color: rgba(255,255,255,{LIGHT_BG_ALPHA});
