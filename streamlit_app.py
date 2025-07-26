@@ -22,7 +22,7 @@ st.markdown(f"""
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
     body {{
-        background: url('https://github.com/alif4addar/My_projeck/blob/main/bg%20streamlit%20no%20wm.png') no-repeat center center fixed;
+        background: url("https://github.com/alif4addar/My_projeck/blob/main/bg%20streamlit%20no%20wm.png") no-repeat center center fixed;
         background-size: cover;
         font-family: 'Inter', sans-serif;
     }}
